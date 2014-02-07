@@ -36,12 +36,16 @@ gem 'spring',        group: :development
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
+group :development, :test do
+	gem 'rspec-rails'
+	gem 'factory_girl_rails'
+end
 
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+group :test do
+	gem 'capybara'
+	gem 'spork'
+	gem 'guard-spork'
+end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
