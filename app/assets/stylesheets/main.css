@@ -1,0 +1,215 @@
+/* clear */
+
+html, body, div, h1, p { margin: 0; padding: 0; }
+
+/* colors 
+
+#bbbdc0 : light-grey
+#545454 : dark-grey;
+#faf5ef : cream
+#4271a5 : blue
+#c6d8ea : light-blue;
+ 
+*/
+
+/* fonts */
+
+h1, .dropletter { font-family: 'Tangerine', "Book Antiqua", Palatino, serif; }
+h1 {
+	font-size: 26pt;
+	color: #bbbdc0;
+	font-weight: 400;}
+h1.header, h1.header-menu { 
+	display: inline-block;
+	margin-top: 65px; }
+h1.header-menu { padding-right: 45px;}
+h1.header:hover, h1.header-menu:hover { color: #4271a5;}
+h1.dropletter, h2, .button {	
+	color: #faf5ef;
+	display: inline; }
+h1.heading { 
+	color: #4271a5;
+	margin-bottom: 5px; }
+h2, p, .button { 
+	font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
+	line-height: 1.75em; }
+h2, .button {
+	font-weight: 700;
+	font-size: 15pt;
+}
+
+p { 
+	line-height: 1.95em;
+	font-weight: 700;
+	color: #545454; }
+a {
+	background-image: url('../assets/underline.png');
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	display: block;
+	width: 190px;
+	text-align: left;
+	text-decoration: none;
+	color: inherit;
+	-webkit-transition: background-position .3s ease;
+	-moz-transition: background-position .3s ease
+	-o-transition: background-position .3s ease
+	transition: background-position .3s ease; }
+a:hover { background-position: -190px 0px; }
+a.no_bar {
+	background-image: none;
+	display: initial;
+}
+
+.button { 
+	font-style: italic; 
+	display: block;
+	float: right;
+	background-color: rgba(0,0,0,.55);
+	margin-top: 20px;
+	padding: 4px 30px 0 25px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	width: 64px;
+	-webkit-transition: all .15s ease;
+	-moz-transition: all .15s ease;
+	-o-transition: all .15s ease;
+	transition: all .15s ease;
+	}
+
+.button:hover {
+	background-color: #4271a5;
+	margin-top: 23px;
+	margin-right: 3px;
+	-webkit-box-shadow: 3px -3px 0px 0px rgba(0,0,0, 0.85);
+	-moz-box-shadow:    3px -3px 0px 0px rgba(0,0,0, 0.45);
+	box-shadow:         3px -3px 0px 0px rgba(0,0,0, 0.45); }
+
+.button:active {
+	background-color: rgba(0,0,0,.55);
+	color: #4f4f4f;
+	margin-top: 20px;
+	margin-right: 0;
+	-webkit-box-shadow: inset -2px 2px 0px 0px rgba(0, 0, 0, 0.55);
+	-moz-box-shadow:    inset -2px 2px 0px 0px rgba(0, 0, 0, 0.55);
+	box-shadow:         inset -2px 2px 0px 0px rgba(0, 0, 0, 0.55);}
+
+.dropletter {
+	font-weight: 700;
+	font-size: 100pt;
+	margin-right: -15px;
+	position: relative;
+	bottom: -4pt;}
+.thin { font-weight: 500; }
+.blue { color : #4271a5; }
+
+/* structure */
+
+body, div#header, div#call_out, div#sundry, div#footer { width: 100%; }
+body {
+	background-color: #faf5ef ;
+	width: 100%;
+	height: 100%;
+	-webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004); }
+
+/* structure, header */
+
+div#wrapper, div#header, div#call_out, div#sundry, div#footer, div#call_out .call_out-text { position: relative; }
+div#wrapper, div#header .navigation, div#header .navigation-menu, div#call_out .call_out-text { margin: 0 auto; }
+div#wrapper, div#sundry .sundry-social_media {
+	border-left: 1px solid #c6d8ea;
+	border-right: 1px solid #c6d8ea; }
+div#wrapper {
+	top: 0;
+	width: 1000px; }
+div#header {
+	height: 155px;
+	background-color: white;}
+div#header .navigation, div#header .navigation-menu { 
+	position: relative;
+	z-index: 999;
+	width: 545px;
+	background-color: white; }
+div#header .navigation-menu { width: 100%; }
+div#header .navigation div, div#header .navigation-menu div { float: left; }
+div#header .navigation div.logo { margin: 0 40px 0 45px;}
+div#header .navigation-menu div.logo_small { margin: 0 16px 0 64px;}
+div#header .swoosh {
+	position: absolute;
+	bottom: -70px;
+	width: 100%; 	
+	height: 170px;
+	z-index: 998; } 
+.no_pad { padding-right: 0 !important; }
+.pad-right { padding-right: 45px; }
+.show { display: default; }
+.hide { display: none; }
+
+/* structure, call out */
+
+div#call_out {
+	height: 329px;
+	background-image: url('../assets/home-flowers.jpg');
+	background-repeat: no-repeat;
+	border-bottom: 4px solid #c6d8ea;}
+div#call_out .call_out-text { 
+	position: absolute;
+	width: 620px;
+	top: 100px;
+	left: 50%;
+	margin-left: -325px;
+	text-align: justify; }
+
+/* structure, sundry */
+
+div#sundry { height: 200px; 
+	background-image: url('../assets/festoonery.png');
+	background-repeat: no-repeat;
+	background-color: white;}
+div#sundry .sundry-wrapper {
+	width: 892px;
+	position: relative;
+	top: 35px;
+	margin: 0 auto; }	
+div#sundry .sundry-latest_event, div#sundry .sundry-social_media, div#sundry .sundry-from_blog, div#sundry .sundry-latest_event .left, div#sundry .sundry-latest_event .right { float: left; }
+div#sundry .sundry-latest_event, div#sundry .sundry-from_blog { width: 340px;}
+
+div#sundry .sundry-social_media, div#sundry .sundry-social_media div { width: 180px; }
+div#sundry .sundry-social_media { 
+	height: 145px; 
+	margin: 0 15px; }
+div#sundry .sundry-social_media div span { 
+	display: inline-block;
+	background-image: url('../assets/smicons.png');
+	background-repeat: no-repeat;
+	width: 45px; 
+	height: 48px; }
+
+.pinterest { margin: 16px 33px 0 26px; }
+.facebook { background-position: -50px 0px;}
+.twitter { 
+	margin-top: 10px;
+	margin-left: 66px;
+	background-position: -100px 0px;}
+
+div#sundry .sundry-latest_event .left { text-align: right; }
+div#sundry .sundry-latest_event .right { 
+	width: 192px; 
+	margin: 7px 0 0 15px; }
+
+/* structure, footer */
+
+div#footer {
+	height: 69px;
+
+	border-top: 1px solid #c6d8ea; }
+div#footer p {
+	display: block;
+	width: 200px;
+	position: relative;
+	left: 50%;
+	margin-left: -75px;
+	padding-top: 20px;
+}
