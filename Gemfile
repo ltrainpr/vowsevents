@@ -38,6 +38,8 @@ gem 'spring',        group: :development
 # gem 'bcrypt-ruby', '~> 3.1.2'
 group :development, :test do
 	gem 'rspec-rails'
+	gem 'guard-rspec'
+	gem 'rb-fsevent'
 	gem 'factory_girl_rails'
 end
 
