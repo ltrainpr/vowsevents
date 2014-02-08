@@ -48,6 +48,9 @@ group :test do
 	gem 'guard-spork'
 end
 
+group :production do
+	gem 'pg'
+end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
