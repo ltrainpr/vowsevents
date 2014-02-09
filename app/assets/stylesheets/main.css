@@ -53,8 +53,8 @@ a {
 	text-decoration: none;
 	color: inherit;
 	-webkit-transition: background-position .3s ease;
-	-moz-transition: background-position .3s ease
-	-o-transition: background-position .3s ease
+	-moz-transition: background-position .3s ease;
+	-o-transition: background-position .3s ease;
 	transition: background-position .3s ease; }
 a:hover { background-position: -190px 0px; }
 a.no_bar {
