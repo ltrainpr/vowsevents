@@ -10,62 +10,9 @@
 
 <body>
 	<div id="wrapper">
-		
-		<div id="header">
-			<div class="navigation" id="navigation">
-				<div class="logo_small hide" id="logo-menu">
-					<img src="assets/logo_small.png" alt="Vows Events Logo">
-				</div>
-				<div id="nav-gallery" class="hide">
-					<a href="#" class="no_bar">
-						<h1 class="header">Gallery</h1>
-					</a>
-				</div>
-				<div id="nav-services">
-					<%= link_to services_path, :class => "no_bar" do %>
-						<h1 class="header">Services</h1>
-					<% end %>
-				</div>
-				<div id="nav-about_us" class="hide">
-					<%= link_to gallery_index_path, :class => "no_bar" do %>
-						<h1 class="header">About Us</h1>
-					<% end %>
-				</div>
-				<div id="nav-testimony" class="hide">
-					<%= link_to testimony_index_path, :class => "no_bar" do %>
-						<h1 class="header">Testimony</h1>
-					<% end %>
-				</div>
-				<div class="logo" id="logo-big">
-					<img src="assets/logo.png" alt="Vows Events Logo">
-				</div>
-
-				<div id="nav-menu">
-					<h1 class="header" style="cursor: pointer;" onClick="showMenu()">Menu</h1>
-				</div>
-				
-				<div id="nav-blog" class="hide">
-					<%= link_to blog_index_path, :class => "no_bar" do %>
-						<h1 class="header">Blog</h1>
-					<% end %>
-				</div>
-				<div id="nav-contact" class="hide">
-					<%= link_to contact_index_path, :class => "no_bar" do %>
-						<h1 class="header no_pad">Contact</h1>
-					<% end %>
-				</div>
-			</div>
-			
-			<div class="swoosh">
-				<img src="assets/swoosh_border.png" id="swoosh-big" class= "show" alt="Blue Horizontal Border">
-				<img src="assets/swoosh_border_menu.png" id="swoosh-menu" class= "hide" alt="Blue Horizontal Border">
-			</div>
-
-		</div>
-
+		<%= render "partials/navigation" %>
 		<div id="call_out">	
-			<div class="call_out-text">
-				
+			<div class="call_out-text">		
 				<h2>
 					<span class="dropletter">V</span>ows Events. 
 					Our mission is to bring your vision to reality, execute the details, 
@@ -73,10 +20,7 @@
 					we want our clients to forget about the details and enjoy their event. 
 					<a href="#" class="no_bar"><span class="button">Contact</span></a> 
 				</h2>
-				
 			</div>
-
-			
 		</div>
 
 		<div id="sundry">

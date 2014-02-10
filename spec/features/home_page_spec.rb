@@ -18,10 +18,10 @@ feature 'Visit the homepage' do
 	end
 
 	scenario 'clicks on Services' do
-		find('#nav-services').find('h1').click
+		find('#nav-services').find('.no_bar').click
 
 		expect(page).to have_title 'Services'
-		expect(page).to have_css 'thin', text: 'hover over specifics'
+		expect(page).to have_css '.direction', text: "hover over for specifics"
 	end
 end
 
@@ -32,31 +32,31 @@ feature 'Navigation from homepage' do
 	end
 
 	scenario 'Visit Gallery' do
-		find('#nav-gallery').find('h1').click
+		find('#nav-gallery').find('.no_bar').click
 
 		expect(page).to have_title 'Gallery'
 	end
 
 	scenario 'Visit About Us' do
-		find('#nav-about_us').find('h1').click
+		find('#nav-about_us').find('.no_bar').click
 
 		expect(page).to have_title 'About Us'
 	end
 
 	scenario 'Visit Testimony' do
-		find('#nav-testimony').find('h1').click
+		find('#nav-testimony').find('.no_bar').click
 
 		expect(page).to have_title 'Testimony'
 	end
 
 	scenario 'Visit Blog' do
-		find('#nav-blog').find('h1').click
+		find('#nav-blog').find('.no_bar').click
 
 		expect(page).to have_title 'Blog'
 	end
 
 	scenario 'Visit Contact' do
-		find('#nav-blog').find('h1').click
+		find('#nav-contact').find('.no_bar').click
 
 		expect(page).to have_title 'Contact'
 	end

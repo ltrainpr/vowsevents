@@ -5,62 +5,13 @@
 <link rel="stylesheet" type="text/css" href="../css/main.css">
 <link href='http://fonts.googleapis.com/css?family=Tangerine:400,700' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+<title>Services</title>
 </head>
 
 <body >
 	<div id ="photo_background">
 	<div id="wrapper">
-		<div id="header">
-			<div class="navigation" id="navigation">
-				<div class="logo_small hide" id="logo-menu">
-					<img src="../assets/logo_small.png" alt="Vows Events Logo">
-				</div>
-				<div id="nav-gallery" class="hide">
-					<a href="#" class="no_bar">
-						<h1 class="header">Gallery</h1>
-					</a>
-				</div>
-				<div id="nav-services">
-					<a href="html/services.html" class="no_bar">
-						<h1 class="header blue">Services</h1>
-					</a>
-				</div>
-				<div id="nav-about_us" class="hide">
-					<a href="#" class="no_bar">
-						<h1 class="header">About Us</h1>
-					</a>
-				</div>
-				<div id="nav-testimony" class="hide">
-					<a href="#" class="no_bar">
-						<h1 class="header">Testimony</h1>
-					</a>
-				</div>
-				<div class="logo" id="logo-big">
-					<img src="../assets/logo.png" alt="Vows Events Logo">
-				</div>
-
-				<div id="nav-menu">
-					<h1 class="header" style="cursor: pointer;" onClick="showMenu()">Menu</h1>
-				</div>
-				
-				<div id="nav-blog" class="hide">
-					<a href="#" class="no_bar">
-						<h1 class="header">Blog</h1>
-					</a>
-				</div>
-				<div id="nav-contact" class="hide">
-					<a href="#" class="no_bar">
-						<h1 class="header no_pad">Contact</h1>
-					</a>
-				</div>
-			</div>
-			
-			<div class="swoosh">
-				<img src="../assets/swoosh_border.png" id="swoosh-big" class= "show" alt="Blue Horizontal Border">
-				<img src="../assets/swoosh_border_menu.png" id="swoosh-menu" class= "hide" alt="Blue Horizontal Border">
-			</div>
-		</div>
-		
+		<%= render "partials/navigation" %>
 		<div id="services">
 				<div id="services-description">
 					<div id="services-description-default">
