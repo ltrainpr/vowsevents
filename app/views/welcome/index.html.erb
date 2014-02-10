@@ -22,19 +22,19 @@
 					</a>
 				</div>
 				<div id="nav-services">
-					<a href="#" class="no_bar">
+					<%= link_to services_path, :class => "no_bar" do %>
 						<h1 class="header">Services</h1>
-					</a>
+					<% end %>
 				</div>
 				<div id="nav-about_us" class="hide">
-					<a href="#" class="no_bar">
+					<%= link_to gallery_index_path, :class => "no_bar" do %>
 						<h1 class="header">About Us</h1>
-					</a>
+					<% end %>
 				</div>
 				<div id="nav-testimony" class="hide">
-					<a href="#" class="no_bar">
+					<%= link_to testimony_index_path, :class => "no_bar" do %>
 						<h1 class="header">Testimony</h1>
-					</a>
+					<% end %>
 				</div>
 				<div class="logo" id="logo-big">
 					<img src="assets/logo.png" alt="Vows Events Logo">
@@ -45,14 +45,14 @@
 				</div>
 				
 				<div id="nav-blog" class="hide">
-					<a href="#" class="no_bar">
+					<%= link_to blog_index_path, :class => "no_bar" do %>
 						<h1 class="header">Blog</h1>
-					</a>
+					<% end %>
 				</div>
 				<div id="nav-contact" class="hide">
-					<a href="#" class="no_bar">
+					<%= link_to contact_index_path, :class => "no_bar" do %>
 						<h1 class="header no_pad">Contact</h1>
-					</a>
+					<% end %>
 				</div>
 			</div>
 			
