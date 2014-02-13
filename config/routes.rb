@@ -1,5 +1,7 @@
 Rails.application.routes.draw do  
 
+  get "upload_photo_controller/index"
+
   root 'welcome#index'
 
   resources :gallery, only: [:index]
@@ -8,4 +10,5 @@ Rails.application.routes.draw do
   resources :testimony, only: [:index]
   resources :blog, only: [:index]
   resources :contact, only: [:index]
+  resources :upload_photo, only: [:index]
 end
