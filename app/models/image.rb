@@ -5,5 +5,5 @@ class Image < ActiveRecord::Base
 	has_attached_file :s3_image_url, styles: {
 		medium: '300x300>'
 	}
-	validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
+	validates_attachment_content_type :s3_image_url, :content_type => /\Aimage\/.*\Z/
 end
