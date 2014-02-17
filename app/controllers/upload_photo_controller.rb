@@ -7,7 +7,9 @@ class UploadPhotoController < ApplicationController
   end
 
   def create
-  	@upload_photo = Image.new(params[:upload_photo])
+		p '*' * 200
+		p params
+		@upload_photo = Image.new(upload_photo_params)
 
   	respond_to do |format|
   		if @upload_photo.save
@@ -27,5 +29,11 @@ class UploadPhotoController < ApplicationController
       format.html # show.html.erb
       format.json { render json: @upload_photo }
     end
+  end
+
+  private
+
+  def upload_photo_params
+    params.require(:image).permit(:s3_image_url)
   end
 end
