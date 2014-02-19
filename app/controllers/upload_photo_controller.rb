@@ -3,11 +3,13 @@ class UploadPhotoController < ApplicationController
   end
 
   def new
-  	@upload_photo = Image.new
+    @events = Event.where("name like ?", "%#{params[:search]}%")
+    @upload_photo = Image.new
   end
 
   def create
-		@upload_photo = Image.new(upload_photo_params)
+		p params
+    @upload_photo = Image.new(upload_photo_params)
 
   	respond_to do |format|
   		if @upload_photo.save
@@ -33,7 +35,7 @@ class UploadPhotoController < ApplicationController
   	@upload_photo = Image.find(params[:id])
     @upload_photo.destroy
     respond_to do |format|
-      format.html { redirect_to images_url }
+      format.html { redirect_to images_path}
       format.json { head :no_content }
     end
   end
@@ -41,6 +43,6 @@ class UploadPhotoController < ApplicationController
   private
 
   def upload_photo_params
-    params.require(:image).permit(:s3_image_url)
+    params.require(:image).permit(:s3_image_url, :event_id)
   end
 end
