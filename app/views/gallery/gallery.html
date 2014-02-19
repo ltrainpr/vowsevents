@@ -2,11 +2,66 @@
 
 <head>
 <link rel="stylesheet" type="text/css" href="../css/main.css">
+<link href='http://fonts.googleapis.com/css?family=Tangerine:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:600,600italic,700,700italic' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
 	<div id="wrapper">
-		<%= render "partials/navigation" %>
+		<div id="header">
+			<div class="navigation" id="navigation">
+				<div class="logo_small hide" id="logo-menu">
+					<a href="../index2.html" class="no_bar">
+						<img src="../assets/logo_small.png" alt="Vows Events Logo">
+					</a>
+				</div>
+				<div id="nav-gallery" class="hide">
+					<a href="#" class="no_bar">
+						<h1 class="header">Gallery</h1>
+					</a>
+				</div>
+				<div id="nav-services">
+					<a href="html/services.html" class="no_bar">
+						<h1 class="header">Services</h1>
+					</a>
+				</div>
+				<div id="nav-about_us" class="hide">
+					<a href="#" class="no_bar">
+						<h1 class="header">About Us</h1>
+					</a>
+				</div>
+				<div id="nav-testimony" class="hide">
+					<a href="#" class="no_bar">
+						<h1 class="header">Testimony</h1>
+					</a>
+				</div>
+				<div class="logo" id="logo-big">
+					<a href="../index2.html" class="no_bar">
+						<img src="../assets/logo.png" alt="Vows Events Logo">
+					</a>
+				</div>
+
+				<div id="nav-menu">
+					<h1 class="header" style="cursor: pointer;" onClick="showMenu()">Menu</h1>
+				</div>
+				
+				<div id="nav-blog" class="hide">
+					<a href="#" class="no_bar">
+						<h1 class="header">Blog</h1>
+					</a>
+				</div>
+				<div id="nav-contact" class="hide">
+					<a href="html/contact.html" class="no_bar">
+						<h1 class="header no_pad">Contact</h1>
+					</a>
+				</div>
+			</div>
+			
+			<div class="swoosh">
+				<img src="../assets/swoosh_border.png" id="swoosh-big" class= "show" alt="Blue Horizontal Border">
+				<img src="../assets/swoosh_border_menu.png" id="swoosh-menu" class= "hide" alt="Blue Horizontal Border">
+			</div>
+		</div>
 
 		<div id="gallery-navigation">
 			<ul>
@@ -18,10 +73,10 @@
 		</div>
 		<div id="gallery">
 			<div class="gallery-images">
-				<div id="measure">
-					<%= image_tag @photo1.s3_image_url.url(:medium), id: "left" %>
-					<%= image_tag @photo2.s3_image_url.url(:medium), id: "center" %>	
-					<%= image_tag @photo3.s3_image_url.url(:medium), id: "right" %>
+				<div id="measure">		
+				<img src="../assets/photos/lafleur-1.jpg" id="left">
+				<img src="../assets/photos/lafleur-3.jpg" id="center">
+				<img src="../assets/photos/lafleur-2.jpg" id="right">
 			</div>
 			</div>
 		</div>

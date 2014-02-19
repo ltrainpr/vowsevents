@@ -8,7 +8,6 @@ Rails.application.routes.draw do
   resources :services, only: [:index]
   resources :about_us, only: [:index]
   resources :testimony, only: [:index]
-  resources :blog, only: [:index]
   resources :contact, only: [:index]
-  resources :upload_photo, only: [:index, :new, :create, :show], as: 'images'
+  resources :upload_photo, only: [:index, :new, :create, :show, :destroy], as: 'images'
 end

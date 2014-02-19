@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+<link href='http://fonts.googleapis.com/css?family=Tangerine:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+</head>
+
+<body >
+	<div id ="photo_background">
+	<div id="wrapper">
+		<div id="header">
+			<div class="navigation" id="navigation">
+				<div class="logo_small hide" id="logo-menu">
+					<img src="../assets/logo_small.png" alt="Vows Events Logo">
+				</div>
+				<div id="nav-gallery" class="hide">
+					<a href="#" class="no_bar">
+						<h1 class="header">Gallery</h1>
+					</a>
+				</div>
+				<div id="nav-services">
+					<a href="html/services.html" class="no_bar">
+						<h1 class="header blue">Services</h1>
+					</a>
+				</div>
+				<div id="nav-about_us" class="hide">
+					<a href="#" class="no_bar">
+						<h1 class="header">About Us</h1>
+					</a>
+				</div>
+				<div id="nav-testimony" class="hide">
+					<a href="#" class="no_bar">
+						<h1 class="header">Testimony</h1>
+					</a>
+				</div>
+				<div class="logo" id="logo-big">
+					<img src="../assets/logo.png" alt="Vows Events Logo">
+				</div>
+
+				<div id="nav-menu">
+					<h1 class="header" style="cursor: pointer;" onClick="showMenu()">Menu</h1>
+				</div>
+				
+				<div id="nav-blog" class="hide">
+					<a href="#" class="no_bar">
+						<h1 class="header">Blog</h1>
+					</a>
+				</div>
+				<div id="nav-contact" class="hide">
+					<a href="#" class="no_bar">
+						<h1 class="header no_pad">Contact</h1>
+					</a>
+				</div>
+			</div>
+			
+			<div class="swoosh">
+				<img src="../assets/swoosh_border.png" id="swoosh-big" class= "show" alt="Blue Horizontal Border">
+				<img src="../assets/swoosh_border_menu.png" id="swoosh-menu" class= "hide" alt="Blue Horizontal Border">
+			</div>
+		</div>
+		
+		<div id="services">
+				<div id="services-description">
+					<div id="services-description-default">
+						<h2 class="thin" style="color: #545454"><span class="dropletter">T</span>he backbone of our company is orchestration. We are organized and experienced 
+						regarding all types of events, and would like to share that experience with you.
+						<br/><br/>
+							As there is a scale for both budget and need of our services, we&#39;ve separated our 
+							skills into several packages to be used as guidelines. All experience can be 
+							customized to your wants and needs. </h2>
+					</div>
+
+					<div id="services-description-ss" class="hide">
+						<h2 class="thin" style="color: #545454"><span class="dropletter">Y</span>ou have ceremony location and vendors selected but need assistance in orchestration. We create your wedding day schedule, manage your rehearsal, ceremony, and serve as contact to your vendors.  </h2>
+					</div>
+
+					<div id="services-description-wg" class="hide">
+						<h2 class="thin" style="color: #545454"><span class="dropletter">W</span>e&#39;ll  find the perfect location for both ceremony and reception, connect with vendors and handle all  logistics so your entire day can be focused on beginning a new life together.  </h2>
+					</div>
+
+					<div id="services-description-bt" class="hide">
+						<h2 class="thin" style="color: #545454"><span class="dropletter">Y</span>ou have your reception under control, but need a hand with the wedding rehearsal, dinner and ceremony  </h2>
+					</div>
+
+					<div id="services-description-di" class="hide">
+						<h2 class="thin" style="color: #545454"><span class="dropletter">S</span>tart to finish, we&#39;ll select the perfect locations, guide you through vendor selection, and manage every detail so you can relax and enjoy the wedding of your dreams with your family and friends.</h2>
+					</div>
+
+					<img src="../assets/curly.png">
+				</div>
+				<div id="services-navigation">
+					<p class="thin">
+						<span class="direction"> hover over for specifics </span>
+						<br/>
+						
+						<span class="services-navigation-item blue ss" onmouseover="showSS()" onmouseout="hideSS()"><span class="pad-right">Simply Sweet</span></span><br/>
+							<span class="pad-right">starts at $800</span><br/>
+
+						<span class="services-navigation-item blue wg" onmouseover="showWG()" onmouseout="hideWG()"><span class="pad-right">White Glove</span></span><br/>
+							<span class="pad-right">starts at $800</span><br/>
+
+						<span class="services-navigation-item blue bt" onmouseover="showBT()" onmouseout="hideBT()"><span class="pad-right">Black Tie</span></span><br/>
+							<span class="pad-right">starts at $3000</span><br/>
+
+						<span class="services-navigation-item blue di" onmouseover="showDI()" onmouseout="hideDI()"><span class="pad-right">Diamond</span></span><br/>
+							<span class="pad-right">starts at $4000</span><br/>
+				</p>
+				</div>
+		</div>
+	</div>
+	</div>	
+	</div>
+	<div id="footer">
+			<p class="thin blue">&copy; Vows Events, 2013</p>
+	</div>
+</body>
+
+<script>
+	function showMenu() {
+		document.getElementById("swoosh-big").className = "hide";
+		document.getElementById("swoosh-menu").className = "show";
+		document.getElementById("logo-big").className = "hide";
+		document.getElementById("logo-menu").className = "show";
+		document.getElementById("navigation").className = "navigation-menu";
+		document.getElementById("nav-services").className += " pad-right";
+		document.getElementById("nav-gallery").className = "show";
+		document.getElementById("nav-gallery").className += " pad-right";
+		document.getElementById("nav-testimony").className = "show";
+		document.getElementById("nav-testimony").className += " pad-right";
+		document.getElementById("nav-about_us").className = "show";
+		document.getElementById("nav-about_us").className += " pad-right";
+		document.getElementById("nav-menu").className += " pad-right";
+		document.getElementById("nav-blog").className = "show";
+		document.getElementById("nav-blog").className += " pad-right";
+		document.getElementById("nav-contact").className = "show";
+		document.getElementById("logo-menu").className += " logo_small";
+	}
+
+	function showSS() {
+		document.getElementById("services-description-default").className = "hide";
+		document.getElementById("services-description-ss").className = "show";
+		document.getElementById("services-description-ss").className += " pad-top"; }
+	function showWG() {
+		document.getElementById("services-description-default").className = "hide";
+		document.getElementById("services-description-wg").className = "show";
+		document.getElementById("services-description-wg").className += " pad-top"; }
+	function showBT() {
+		document.getElementById("services-description-default").className = "hide";
+		document.getElementById("services-description-bt").className = "show";
+		document.getElementById("services-description-bt").className += " pad-top"; }
+	function showDI() {
+		document.getElementById("services-description-default").className = "hide";
+		document.getElementById("services-description-di").className = "show";
+		document.getElementById("services-description-di").className += " pad-top"; }
+	function hideSS() {
+		document.getElementById("services-description-ss").className = "hide";
+		document.getElementById("services-description-default").className = "show";}
+	function hideWG() {
+		document.getElementById("services-description-wg").className = "hide";
+		document.getElementById("services-description-default").className = "show"	}
+	function hideBT() {
+		document.getElementById("services-description-bt").className = "hide";
+		document.getElementById("services-description-default").className = "show";}
+	function hideDI() {
+		document.getElementById("services-description-di").className = "hide";
+		document.getElementById("services-description-default").className = "show"	}
+
+</script>
+</html>

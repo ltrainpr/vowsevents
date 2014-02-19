@@ -7,8 +7,6 @@ class UploadPhotoController < ApplicationController
   end
 
   def create
-		p '*' * 200
-		p params
 		@upload_photo = Image.new(upload_photo_params)
 
   	respond_to do |format|
@@ -23,11 +21,20 @@ class UploadPhotoController < ApplicationController
   end
 
   def show
-  	@upload_photo = Image.find(params[:id])
+    @upload_photo = Image.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @upload_photo }
+    end
+  end
+
+  def destroy
+  	@upload_photo = Image.find(params[:id])
+    @upload_photo.destroy
+    respond_to do |format|
+      format.html { redirect_to images_url }
+      format.json { head :no_content }
     end
   end
 
