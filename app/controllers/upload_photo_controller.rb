@@ -8,7 +8,6 @@ class UploadPhotoController < ApplicationController
   end
 
   def create
-		p params
     @upload_photo = Image.new(upload_photo_params)
 
   	respond_to do |format|
