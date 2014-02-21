@@ -11,11 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140221154554) do
+ActiveRecord::Schema.define(version: 20140221155600) do
 
   create_table "events", force: true do |t|
-    t.string "name"
-    t.date   "date"
+    t.string   "name"
+    t.date     "date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "images", force: true do |t|
@@ -25,15 +27,19 @@ ActiveRecord::Schema.define(version: 20140221154554) do
     t.string   "s3_image_url_content_type"
     t.integer  "s3_image_url_file_size"
     t.datetime "s3_image_url_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "images", ["event_id"], name: "index_images_on_event_id"
   add_index "images", ["testimonial_id"], name: "index_images_on_testimonial_id"
 
   create_table "testimonials", force: true do |t|
-    t.string  "quote"
-    t.integer "image_id"
-    t.integer "event_id"
+    t.string   "quote"
+    t.integer  "image_id"
+    t.integer  "event_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "testimonials", ["event_id"], name: "index_testimonials_on_event_id"
