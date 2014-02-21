@@ -423,3 +423,7 @@ div#testimony-sm span {
 .fbook { background-position: 70px -6px;}
 
 
+
+#measure {
+	margin-left: -375px!important;
+}
