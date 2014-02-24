@@ -11,6 +11,13 @@
       <% @events.each do |event| %>
         <li>
           <%= event.id %> <%= event.name %>  <%= event.date %>
+          <ul>
+          <% event.testimonials.each do |testimonial| %>
+            <% if testimonial %>
+              <li><%= testimonial.id %> <%= testimonial.quote %></li> 
+            <% end %>
+          <% end %>
+          </ul> 
         </li>
       <% end %>
     </ul>
@@ -34,6 +41,11 @@
     <div class="event">
       <%= f.label :event_id %>
       <%= f.text_field :event_id %>
+    </div>
+
+    <div class="testimonial">
+      <%= f.label :testimonial_id %>
+      <%= f.text_field :testimonial_id %>
     </div>
 
     <div class="field">

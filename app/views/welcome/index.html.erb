@@ -1,8 +1,4 @@
-<!DOCTYPE html>
-<html>
-
 <head>
-	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<title>Home</title>
 </head>
 
@@ -15,8 +11,10 @@
 					<span class="dropletter">V</span>ows Events. 
 					Our mission is to bring your vision to reality, execute the details, 
 					and strip the stress from event planning. Always exceeding our customers expectations, 
-					we want our clients to forget about the details and enjoy their event. 
-					<a href="#" class="no_bar"><span class="button">Contact</span></a> 
+					we want our clients to forget about the details and enjoy their event.
+					<%= link_to contact_index_path, class: "no_bar" do %> 
+						<span class="button">Contact</span>
+					<% end %> 
 				</h2>
 			</div>
 		</div>
@@ -50,7 +48,7 @@
 					<p class="thin">We are proud to announce that Vows Events
 					has a new blog!
 
-					<a class="no_bar blue" href="#" style="margin-left: 15px">Read On</a>
+					<a class="no_bar blue" href="http://vowsevents.tumblr.com" style="margin-left: 15px">Read On</a>
 					<span class="thin blue" style="float: right; margin-top: 30px; ">Jan 14, 2013</span></p>
 				</div>
 			</div>
@@ -83,4 +81,3 @@
 		document.getElementById("logo-menu").className += " logo_small";
 	}
 </script>
-</html>
