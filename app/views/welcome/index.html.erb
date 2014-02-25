@@ -60,24 +60,4 @@
 		</div>
 	
 </body>
-<script>
-	function showMenu() {
-		document.getElementById("swoosh-big").className = "hide";
-		document.getElementById("swoosh-menu").className = "show";
-		document.getElementById("logo-big").className = "hide";
-		document.getElementById("logo-menu").className = "show";
-		document.getElementById("navigation").className = "navigation-menu";
-		document.getElementById("nav-services").className += " pad-right";
-		document.getElementById("nav-gallery").className = "show";
-		document.getElementById("nav-gallery").className += " pad-right";
-		document.getElementById("nav-testimony").className = "show";
-		document.getElementById("nav-testimony").className += " pad-right";
-		document.getElementById("nav-about_us").className = "show";
-		document.getElementById("nav-about_us").className += " pad-right";
-		document.getElementById("nav-menu").className += " pad-right";
-		document.getElementById("nav-blog").className = "show";
-		document.getElementById("nav-blog").className += " pad-right";
-		document.getElementById("nav-contact").className = "show";
-		document.getElementById("logo-menu").className += " logo_small";
-	}
-</script>
+<script type="text/javascript" src="<%= asset_path('navigation-bar.js') %>"/>

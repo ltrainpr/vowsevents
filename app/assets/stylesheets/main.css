@@ -154,7 +154,7 @@ div#header .swoosh {
 	display: block;
 	padding-top: 75px; }
 .show { display: default; }
-.hide { display: none !important; }
+.hide { display: none; }
 
 /* structure, call out */
 
