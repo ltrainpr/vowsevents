@@ -45,8 +45,8 @@ a, span.contact-navigation, span.yes_to_AQ, li {
 	display: block;
 	cursor: pointer;
 	-webkit-transition: all .3s ease;
-	-moz-transition: all .3s ease
-	-o-transition: all .3s ease
+	-moz-transition: all .3s ease;
+	-o-transition: all .3s ease;
 	transition: all .3s ease; }
 a, .contact-navigation { background-position: 0px 0px; }
 a { background-image: url('../assets/underline.png');}
