@@ -1,6 +1,17 @@
+	<script type="text/javascript">
+		function centerImages() {
+			var y = document.getElementById("center").offsetWidth;
+			var z = document.getElementById("left").offsetWidth;
+			// find what lies beyond the halfway point of the 1000px container div
+			// by subtracting half of it from half of the center image and all of the left image
+			var x = (y / 2) + z - 500;
+			// set the left margin of the image container div as that surplus
+			document.getElementById("measure").style.marginLeft= "-"+x+"px";
+			console.log(y, z, x)
+		}
+	</script>
 
-
-	<body>
+	<body onload="centerImages();">
 		<div id="wrapper">
 			<%= render "partials/navigation" %>
 
@@ -58,45 +69,12 @@
 		</div>
 	</body>
 
-	<script>
-
-		// SHOW THE EXPANDED MENU
-		// NOTE: THIS NEEDS TO BE MADE A TOGGLE EFFECT
-
-		function showMenu() {
-			// replace the header bottom border image
-			document.getElementById("swoosh-big").className = "hide";
-			document.getElementById("swoosh-menu").className = "show";
-			// change the logo to the smaller ring logo and toss it all the way left
-			document.getElementById("logo-big").className = "hide";
-			document.getElementById("logo-menu").className = "show";
-			document.getElementById("logo-menu").className += " logo_small";
-			// change the navigation bar to full width
-			document.getElementById("navigation").className = "navigation-menu";
-			// add padding to each nav item and show those that are invisible
-			document.getElementById("nav-services").className += " pad-right";
-			document.getElementById("nav-gallery").className = "show";
-			document.getElementById("nav-gallery").className += " pad-right";
-			document.getElementById("nav-testimony").className = "show";
-			document.getElementById("nav-testimony").className += " pad-right";
-			document.getElementById("nav-about_us").className = "show";
-			document.getElementById("nav-about_us").className += " pad-right";
-			document.getElementById("nav-menu").className += " pad-right";
-			document.getElementById("nav-blog").className = "show";
-			document.getElementById("nav-blog").className += " pad-right";
-			document.getElementById("nav-contact").className = "show";
-		}
+	<script type="text">
 
 		// CENTER GALLERY IMAGES
 
 		// find width of the center and left image
-		var y = document.getElementById("center").offsetWidth;
-		var z = document.getElementById("left").offsetWidth;
-		// find what lies beyond the halfway point of the 1000px container div
-		// by subtracting half of it from half of the center image and all of the left image
-		var x = (y / 2) + z - 500;
-		// set the left margin of the image container div as that surplus
-		document.getElementById("measure").style.marginLeft= -x;
+		
 
 
 
