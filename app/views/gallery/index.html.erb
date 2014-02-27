@@ -17,9 +17,9 @@
 
 			<div id="gallery-navigation">
 				<ul>
-					<li class="first">Jen &amp; Rob </li>
-					<li>Lionel &amp; Karin</li>
-					<li>The LaFleur Wedding</li>
+					<% @events.each do |event| %>
+						<li><%= link_to event.name, gallery_index_path(event_id: event.id), { :onclick => "history.go(0)" } %></li>
+					<% end %>
 				</ul>
 				<h1>Gallery</h1>
 			</div>
