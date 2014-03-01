@@ -1,17 +1,35 @@
 	<script type="text/javascript">
-		function centerImages() {
-			var y = document.getElementById("center").offsetWidth;
-			var z = document.getElementById("left").offsetWidth;
-			// find what lies beyond the halfway point of the 1000px container div
-			// by subtracting half of it from half of the center image and all of the left image
-			var x = (y / 2) + z - 500;
-			// set the left margin of the image container div as that surplus
-			document.getElementById("measure").style.marginLeft= "-"+x+"px";
-			console.log(y, z, x)
-		}
+		$(window).load(function centerImages() {
+	    var y = document.getElementById("center").offsetWidth;
+	    var z = document.getElementById("left").offsetWidth;
+	    var right = document.getElementById("right").offsetWidth;
+	    // find what lies beyond the halfway point of the 1000px container div
+	    // by subtracting half of it from half of the center image and all of the left image
+	    var x = (y / 2) + z - 500;
+	    var showing = 1000 - y - (z-x) - right
+	    // set the left margin of the image container div as that surplus
+	    document.getElementById("measure").style.marginLeft= "-"+x+"px";
+	    
+	    $('.slide-left').click(function(){
+	        $('#measure').animate({
+	            left: x
+	        }, 500);
+    	});
+
+    	$('.slide-center').click(function(){
+        $('#measure').animate({
+            left: 0
+        }, 500);
+    	});
+
+	    $('.slide-right').click(function(){
+        $('#measure').animate({
+            left: showing
+        }, 500);
+	    });
+		});
 	</script>
 
-	<body onload="centerImages();">
 		<div id="wrapper">
 			<%= render "partials/navigation" %>
 
@@ -25,13 +43,16 @@
 			</div>
 			<div id="gallery">
 				<div class="gallery-images">
+					<input type="button" class="slide-left" value="&laquo; Slide Left" /> 
+			    <input type="button" class="slide-center" value="Center"> 
+			    <input type="button" class="slide-right" value="Slide Right &raquo;"> 
 					<div id="measure">
 						<% if @photo1 && @photo2 && @photo3 %>
 							<%= image_tag @photo1.s3_image_url.url(:medium), id: "left" %>
 							<%= image_tag @photo2.s3_image_url.url(:medium), id: "center" %>	
 							<%= image_tag @photo3.s3_image_url.url(:medium), id: "right" %>
 						<% end %>
-				</div>
+					</div>
 				</div>
 			</div>
 
@@ -67,7 +88,6 @@
 		<div id="footer">
 			<p class="thin blue">&copy; Vows Events, 2013</p>
 		</div>
-	</body>
 
 	<script type="text/javascript">
 

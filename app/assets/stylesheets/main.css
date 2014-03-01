@@ -426,4 +426,5 @@ div#testimony-sm span {
 
 #measure {
 	margin-left: -375px;
+	position: relative;
 }

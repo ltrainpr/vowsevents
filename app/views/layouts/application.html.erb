@@ -7,22 +7,10 @@
   <%= csrf_meta_tags %>
   <link href='http://fonts.googleapis.com/css?family=Tangerine:400,700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:100,600,700,700italic' rel='stylesheet' type='text/css'>
-	<script type="text/javascript">
-		function centerImages() {
-			var y = document.getElementById("center").offsetWidth;
-			var z = document.getElementById("left").offsetWidth;
-			// find what lies beyond the halfway point of the 1000px container div
-			// by subtracting half of it from half of the center image and all of the left image
-			var x = (y / 2) + z - 500;
-			// set the left margin of the image container div as that surplus
-			document.getElementById("measure").style.marginLeft= "-"+x+"px";
-			console.log(y, z, x)
-		}
-	</script>
 </head>
 <body>
 	
-<%= yield %>
+	<%= yield %>
 
 </body>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
