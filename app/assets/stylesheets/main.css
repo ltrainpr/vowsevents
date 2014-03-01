@@ -107,7 +107,7 @@ a.no_bar {
 	margin-right: -15px;
 	position: relative;
 	bottom: -4pt;}
-.thin, input, textarea { font-weight: 500; }
+.thin, input, textarea { font-weight: 600; }
 .blue { color : #4271a5; }
 .dg { color: #545454;}
 .big {font-size: 15pt;}
@@ -124,14 +124,15 @@ body {
 
 /* structure, header */
 
-div#wrapper, div#header, div#call_out, div#sundry, div#footer, div#call_out .call_out-text, div#header .navigation-menu, div#header .navigation  { position: relative; }
-div#wrapper, div#header .navigation, div#header .navigation-menu, div#call_out .call_out-text { margin: 0 auto; }
+div#wrapper, div#header, div#call_out, div#sundry, div#footer, div#call_out .call_out-text, div#header .navigation-menu, div#header .navigation, div#about_wrapper  { position: relative; }
+div#wrapper, div#header .navigation, div#header .navigation-menu, div#call_out .call_out-text, div#about_wrapper { margin: 0 auto; }
 div#wrapper, div#sundry .sundry-social_media {
 	border-left: 1px solid #c6d8ea;
 	border-right: 1px solid #c6d8ea; }
 div#wrapper {
 	top: 0;
-	width: 1000px; }
+	width: 1000px;
+	background-color: white;}
 div#header { height: 155px;
 	background-color: white; }
 div#header .navigation, div#header .navigation-menu { 
@@ -154,7 +155,7 @@ div#header .swoosh {
 	display: block;
 	padding-top: 75px; }
 .show { display: default; }
-.hide { display: none; }
+.hide { display: none !important; }
 
 /* structure, call out */
 
@@ -226,17 +227,15 @@ div#footer p {
 /* SUB-PAGES */
 
 /* sub-pages, services */
-div#photo_background {
+div#services_background { background-image: url('../assets/services-bg.jpg'); }
+div.photo_background {
 	width: 100%;
-	background-image: url('../assets/services-bg.jpg');
 	background-position: center center fixed;
 	background-repeat: no-repeat;
 	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
-  	background-size: cover;
-
-}
+  	background-size: cover; }
 div#services { height: 565px; }
 div#services-description, div#services-navigation { float: left;}
 div#services-description { 
@@ -246,7 +245,7 @@ div#services-description {
 div#services-description img {
 	display: block;
 	margin: 10px auto; }
-div#services-description .dropletter { 
+div#services-description .dropletter, div#about_wrapper .dropletter { 
 	font-size: 50pt;
 	margin-right: 0;} 
 div#services-navigation { 
@@ -266,14 +265,19 @@ div#services-navigation .services-navigation-item {
 	margin-bottom: -63px;
 	padding-top: 26px; 
 	cursor: pointer;}
-div#services-navigation .bt { background-position-x: -10px; }
-div#services-navigation .wg { background-position-x: 313px; }
-div#services-navigation .ss { background-position-x: 621px; }
+div#services-navigation .services-navigation-item span {
+	height: 100%;
+	display: inline-block;
+	width: 275px; }
+div#services-navigation .bt { background-position-x: -14px; }
+div#services-navigation .wg { background-position-x: 631px; }
+div#services-navigation .ss { background-position-x: 939px; }
 div#services-navigation .di { background-position-x: -318px; }
+div#services-navigation .oe { background-position-x: 310px;}
 div#services-navigation .services-navigation-item:hover { background-position-y: -94px; }
 
 /* sub-pages, contact */
-
+div#contact_background { background-image: url('../assets/photos/photo_background_contact.jpg');}
 div#contact-form { 
 	height: 440px;
 	padding-top: 75px;
@@ -311,7 +315,8 @@ span.would_you {
 }
 
 /* sub-pages, gallery */
-
+div#gallery_background { background-image: url('../assets/photos/photo_background_gallery.jpg');
+}
 div#gallery-navigation, div#gallery, div#gallery-details { background-color: #fff; }
 div#gallery-navigation { 
 	height: 85px;
@@ -397,6 +402,7 @@ div#testimony-header h1 {
 	margin: 0 32px 20px 0; }
 div#testimony {
 	padding-bottom: 70px; }
+div#testimony a { margin-left: 400px;}
 div#testimony div {
 	position: relative;
 	margin-bottom: 20px;}
@@ -408,8 +414,7 @@ div#testimony-sm {
 	position: absolute;
 	bottom: 29px;
 	height: 35px;
-	right: -75px;
-}
+	right: -75px; }
 div#testimony-sm span {
 	float: left;
 	display: block;
@@ -422,9 +427,105 @@ div#testimony-sm span {
 .twit { background-position: -75px -72px}
 .fbook { background-position: 70px -6px;}
 
-
-
-#measure {
-	margin-left: -375px;
+div#full_black_background {
+	width: 100%;
+	background-color: rgba(0,0,0,.9);
 	position: relative;
 }
+div#full_black_background div#back_to_testimony {
+	float: left;
+	margin-top: 15px;
+	margin-left: 20px;}
+div#full_black_background div#back_to_testimony a:hover {
+	color: white;
+	display: block;
+	-webkit-transform: scale(1.05);
+	-moz-transform: scale(1.05);
+	-ms-transform: scale(1.05);
+	transform: scale(1.05); }
+div#full_black_background div#pdf_display {
+	margin: 0 auto;
+	width: 1000px;
+	display: block;
+	padding: 60px 0; }
+
+
+/* sub-pages, about */
+div#about_background { background-image: url('../assets/photos/photo_background_about.jpg'); }
+div#about_wrapper {
+	width: 600px;
+	padding-top: 79px;
+	background-color: white;
+	height: 600px; }
+div#about_wrapper div#about_photos { height: 410px; }
+div#about_wrapper div#about_left, div#about_wrapper div#about_right { float: left; }
+div#about_wrapper div#about_left { 
+	width: 190px;
+	margin-right: 16px; }
+div#about_wrapper div#about_left div#group-thumb {
+	display: inline-block;
+	height: 120px;
+	background-color: #4271a5;
+	cursor: pointer;
+	position: relative;
+}
+div#about_wrapper div#about_left div#group-thumb span {
+	position: absolute;
+	top: 8px;
+	left: 12px;
+	color: white;
+	z-index: 1;
+	display: block;
+}
+div#about_wrapper div#about_left div#group-thumb img {
+	z-index: 998 
+	-webkit-transition: all .3s ease-out; 
+	-moz-transition: all .3s ease-out;
+	-o-transition: all .3s ease-out;
+	transition: all .3s ease-out; 
+	}
+div#about_wrapper div#about_left div#group-thumb img:hover {
+	opacity: .2;
+}
+div#about_wrapper div#about_right { width: 390px; }
+div#about_wrapper div#about_right img { width: 100%; }
+div#about_wrapper div.about_indi { height: 400px }
+div#about_wrapper div.about_indi div {
+	width: 185px;
+	float: left; }
+div#about_wrapper div#about_left div.about_photo {
+	position: relative;
+	height: 122px;
+	width: 100%;
+	margin-bottom: 16px;
+	background-image: url('../assets/photos/about_photos.png'); }
+div#about_wrapper div#about_left div.about_photo p { 
+	font-size: 10pt;
+	display: inline-block;
+	position: absolute;
+	left: 10px;
+	top: 6px;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;}
+div#about_wrapper div#about_left div.about_photo p:hover { color: white; }
+div#about_wrapper div#about_left div.avery { background-position: 0px 266px; }
+div#about_wrapper div#about_left div.simona { background-position: 0px 123px; }
+div#about_wrapper div#about_left div.about_photo div.name-tag {
+	width: 108px;
+	height: 36px;
+	background-image: url('../assets/about-us_tag.png');
+	background-position: 113px;
+	position: absolute;
+	bottom: 2px;
+	left: -36px; 
+	-webkit-transition: all .3s ease-out; 
+	-moz-transition: all .3s ease-out;
+	-o-transition: all .3s ease-out;
+	transition: all .3s ease-out; }
+div#about_wrapper div#about_left div.about_photo div.name-tag:hover { background-position: 220px; }
+
+
+
+
+
