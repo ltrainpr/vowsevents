@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :gallery, only: [:index]
   resources :services, only: [:index]
   resources :about_us, only: [:index]
-  resources :testimony, only: [:index]
+  resources :testimony, only: [:index, :show]
   resources :contact, only: [:index]
   resources :upload_photo, only: [:index, :new, :create, :show, :destroy], as: 'images'
 end
