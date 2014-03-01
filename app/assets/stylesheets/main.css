@@ -478,7 +478,7 @@ div#about_wrapper div#about_left div#group-thumb span {
 	display: block;
 }
 div#about_wrapper div#about_left div#group-thumb img {
-	z-index: 998 
+	z-index: 998; 
 	-webkit-transition: all .3s ease-out; 
 	-moz-transition: all .3s ease-out;
 	-o-transition: all .3s ease-out;

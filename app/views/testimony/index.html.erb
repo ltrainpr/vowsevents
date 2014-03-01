@@ -1,75 +1,52 @@
-<html>
 
-	<head>
-		<link rel="stylesheet" type="text/css" href="../css/main.css">
-	</head>
+<div id="wrapper">
+	<%= render "partials/navigation" %>
 
-	<body>
-		<div id="wrapper">
-			<%= render "partials/navigation" %>
+	<div id="testimony-wrapper">
+		<div id="testimony-header">
+			<h1 class="dg">Testimonials</h1>
+		</div>
 
-			<div id="testimony-wrapper">
-				<div id="testimony-header">
-					<h1 class="dg">Testimonials</h1>
-				</div>
-
-				<div id="testimony">
-					<div>
-						<p class="thin"><span class="blue big">Jen &amp; Rob</span>
-							<br/>
-					"Our special day was September and thanks to Vows, it was perfect."
-						<br/>
-						<br/>
-
-					<span class="contact-navigation show-testimony">read testimonial</span>
-						</p>
-					</div>
-					<div>
-					<p class="thin"><span class="blue big">Rhonda &amp; Maynard</span>
-						<br/>
-					"I am writing to you Avery to thank you for the great job you did for us in
-							our wedding planning."
-
+		<div id="testimony">
+			<div>
+				<p class="thin"><span class="blue big">Jen &amp; Rob</span>
+					<br/>
+			"Our special day was September and thanks to Vows, it was perfect."
+				<br/>
+				<br/>
+				<a href="testimony_sample2.html">
 					<span class="contact-navigation show-testimony" >read testimonial</span>
-					<span class="contact-navigation show-testimony" href="#">more testimonials</span>
-					</div>
-				</div>
-				<div id="testimony-sm">
-					<a href="http://www.pinterest.com/vowseventsdenvr/" target="_blank" class="no_bar">
-						<span class="pint"></span>
-					</a>
-					<a href="https://twitter.com/VowsEventsDenvr" target="_blank" class="no_bar">
-						<span class="fbook"></span>
-					</a>
-					<a href="https://www.facebook.com/vowsevents" class ="no_bar" target="_blank">
-						<span class="twit"></span>
-					</a>	
-				</div>
+				</a>
+				</p>
+			</div>
+			<div>
+			<p class="thin"><span class="blue big">Rhonda &amp; Maynard</span>
+				<br/>
+			"I am writing to you Avery to thank you for the great job you did for us in
+					our wedding planning."
+
+			<a href="testimony/testimony_sample1.html">
+				<span class="contact-navigation show-testimony" >read testimonial</span>
+			</a>
+			<a href="testimony/testimony_sample3.html" d>
+				<span class="contact-navigation show-testimony" >read testimonials</span>
+			</a>
 			</div>
 		</div>
-		<div id="footer">
-			<p class="thin blue">&copy; Vows Events, 2013</p>
+		<div id="testimony-sm">
+			<a href="http://www.pinterest.com/vowseventsdenvr/" target="_blank" class="no_bar">
+				<span class="pint"></span>
+			</a>
+			<a href="https://twitter.com/VowsEventsDenvr" target="_blank" class="no_bar">
+				<span class="fbook"></span>
+			</a>
+			<a href="https://www.facebook.com/vowsevents" class ="no_bar" target="_blank">
+				<span class="twit"></span>
+			</a>	
 		</div>
-	</body>
+	</div>
+</div>
+<div id="footer">
+	<p class="thin blue">&copy; Vows Events, 2013</p>
+</div>
 
-	<script>
-		function showMenu() {
-			document.getElementById("swoosh-big").className = "hide";
-			document.getElementById("swoosh-menu").className = "show";
-			document.getElementById("logo-big").className = "hide";
-			document.getElementById("logo-menu").className = "show";
-			document.getElementById("navigation").className = "navigation-menu";
-			document.getElementById("nav-services").className += " pad-right";
-			document.getElementById("nav-gallery").className = "show";
-			document.getElementById("nav-gallery").className += " pad-right";
-			document.getElementById("nav-testimony").className = "show";
-			document.getElementById("nav-testimony").className += " pad-right";
-			document.getElementById("nav-about_us").className = "show";
-			document.getElementById("nav-about_us").className += " pad-right";
-			document.getElementById("nav-menu").className += " pad-right";
-			document.getElementById("nav-blog").className = "show";
-			document.getElementById("nav-blog").className += " pad-right";
-			document.getElementById("nav-contact").className = "show";
-			document.getElementById("logo-menu").className += " logo_small"; }
-	</script>
-</html>
