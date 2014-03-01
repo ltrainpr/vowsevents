@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+<link href='http://fonts.googleapis.com/css?family=Tangerine:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+</head>
+
+
+
+<body>
+<div id="about_background" class="photo_background">
+<div id="wrapper">
+	<div id="header">
+		<div class="navigation" id="navigation">
+			<div class="logo_small hide" id="logo-menu">
+				<a href="../index2.html" class="no_bar">
+					<img src="../assets/logo_small.png" alt="Vows Events Logo">
+				</a>
+			</div>
+			<div id="nav-gallery" class="hide">
+				<a href="gallery.html" class="no_bar">
+					<h1 class="header">Gallery</h1>
+				</a>
+			</div>
+			<div id="nav-services">
+				<a href="services.html" class="no_bar">
+					<h1 class="header">Services</h1>
+				</a>
+			</div>
+			<div id="nav-about_us" class="hide">
+				<a href="about.html" class="no_bar">
+					<h1 class="header blue">About Us</h1>
+				</a>
+			</div>
+			<div id="nav-testimony" class="hide">
+				<a href="testimony.html" class="no_bar">
+					<h1 class="header">Testimony</h1>
+				</a>
+			</div>
+			<div class="logo" id="logo-big">
+				<a href="../index2.html" class="no_bar">
+					<img src="../assets/logo.png" alt="Vows Events Logo">
+				</a>
+			</div>
+
+			<div id="nav-menu">
+				<h1 class="header" style="cursor: pointer;" onClick="showMenu()">Menu</h1>
+			</div>
+			
+			<div id="nav-blog" class="hide">
+				<a href="http://vowsevents.tumblr.com" class="no_bar">
+					<h1 class="header">Blog</h1>
+				</a>
+			</div>
+			<div id="nav-contact" class="hide">
+				<a href="contact.html" class="no_bar">
+					<h1 class="header no_pad">Contact</h1>
+				</a>
+			</div>
+		</div>
+		
+		<div class="swoosh">
+			<img src="../assets/swoosh_border.png" id="swoosh-big" class= "show" alt="Blue Horizontal Border">
+			<img src="../assets/swoosh_border_menu.png" id="swoosh-menu" class= "hide" alt="Blue Horizontal Border">
+		</div>
+	</div>
+
+	<div id="about_wrapper">
+		<div id="about_photos">
+			<div id="about_left">
+				<p style="position:absolute; top: 46px;" id="directionz"><span class="thin direction">click name for details</span></p>
+				
+				<div class="about_photo karin" id="k-thumb">
+					<div class="name-tag" onclick="showKA()">
+						<p class="blue thin">Karin Ramos</p>
+					</div>
+				</div>
+				<div class="about_photo avery" id="a-thumb">
+					<div class="name-tag" onclick="showAV()">
+						<p class="blue thin">Avery La Fleur</p>
+					</div>
+				</div>
+				<div class="about_photo simona" id="s-thumb">
+					<div class="name-tag" onclick="showSI()">
+						<p class="blue thin">Simona Shapiro</p>
+					</div>
+				</div>
+				<div class="hide" id="group-thumb">
+					<h2><span>Back</span></h2>
+					<img onclick="showGroup()" src="../assets/photos/about-us-group-thumb.jpg">
+				</div>
+				
+			</div>
+			<div id="about_right">
+				<div id="group_photo">
+					<img src="../assets/photos/about-us-group.jpg" alt="Vows Events Staff">
+				</div>
+				<div id="about-karin" class="hide">
+					<div style="padding-right: 16px">
+						<img src="../assets/photos/about-karin.jpg" alt="Karin Ramos Vows Events">
+					</div>
+					<div>
+						<p class="thin" style="text-align: justify"><span class="blue">Karin Ramos</span><br/>
+						A planner by nature, Karin keeps a mental checklist from A-Z. She is a problem-solver, 
+						peacekeeper, and loves to incorporate personal touches into events; providing clients with the WOW 
+						factor. She considers herself to be a cake and cupcake aficionado.</p> 
+					</div> 
+				</div>
+				<div id="about-avery" class="hide">
+					<div style="padding-right: 16px">
+						<img src="../assets/photos/about-avery.jpg" alt="Avery S. Fleur Vows Events">
+					</div>
+					<div>
+						<p class="thin" style="text-align: justify"><span class="blue">Avery S. La Fleur</span><br/>
+						Avery has a Master&#39;s degree in Social Work and a personal knack for being obsessive 
+						compulsive with the fine details of event planning. His personal diagnosis allows his clients to feel at 
+						ease, and provided with the sense of being in good hands.</p> 
+					</div> 
+				</div>
+				<div id="about-simona" class="hide">
+					<div style="padding-right: 16px">
+						<img src="../assets/photos/about-simona.jpg" alt="Simona Shapiro Vows Events">
+					</div>
+					<div>
+						<p class="thin" style="text-align: justify"><span class="blue">Simona Shapiro</span><br/>
+						Dog lover, former teeny-bopper, and DIY craft enthusiast, Simona creates buzz for the Events club and is 
+						enthusiastic to plan your event. She is a sucker for a good love story and can't wait to hear yours!.</p>
+					</div>
+				</div> 
+			</div>
+		</div>
+
+		<div>
+			<p class="thin" style="text-align:justify; margin-top: 20px">
+			<span class="dropletter">W</span>e are a team of three based in Denver, Colorado. Our goal is to render
+			your event expectations as accurately and stress-free as possible. We pride ourselves
+			on our organization, attention to detail and awareness of both today's trends and
+			succesful traditions.
+		</p>
+		</div>
+
+		
+	</div>
+		<div>
+
+			<!-- I've re-used the testimony-sm (social media) though this is not syntactically sound -->
+			<div id="testimony-sm">
+				<a href="http://www.pinterest.com/vowseventsdenvr/" target="_blank" class="no_bar">
+					<span class="pint"></span>
+				</a>
+				<a href="https://twitter.com/VowsEventsDenvr" target="_blank" class="no_bar">
+					<span class="fbook"></span>
+				</a>
+				<a href="https://www.facebook.com/vowsevents" class ="no_bar" target="_blank">
+					<span class="twit"></span>
+				</a>	
+			</div>
+		</div>
+</div>
+</div>
+
+<div id="footer">
+		<p class="thin blue">&copy; Vows Events, 2013</p>
+</div>
+
+</body>
+<script>
+function showMenu() {
+		document.getElementById("swoosh-big").className = "hide";
+		document.getElementById("swoosh-menu").className = "show";
+		document.getElementById("logo-big").className = "hide";
+		document.getElementById("logo-menu").className = "show";
+		document.getElementById("navigation").className = "navigation-menu";
+		document.getElementById("nav-services").className += " pad-right";
+		document.getElementById("nav-gallery").className = "show";
+		document.getElementById("nav-gallery").className += " pad-right";
+		document.getElementById("nav-testimony").className = "show";
+		document.getElementById("nav-testimony").className += " pad-right";
+		document.getElementById("nav-about_us").className = "show";
+		document.getElementById("nav-about_us").className += " pad-right";
+		document.getElementById("nav-menu").className += " pad-right";
+		document.getElementById("nav-blog").className = "show";
+		document.getElementById("nav-blog").className += " pad-right";
+		document.getElementById("nav-contact").className = "show";
+		document.getElementById("logo-menu").className += " logo_small";
+	}
+
+	function showKA() {
+		document.getElementById("a-thumb").className = "hide";
+		document.getElementById("k-thumb").className = "hide";
+		document.getElementById("s-thumb").className = "hide";
+		document.getElementById("directionz").className = "hide";
+		document.getElementById("group_photo").className = "hide";
+		document.getElementById("about-karin").className = "show"; 
+		document.getElementById("group-thumb").className = "show"; 
+		document.getElementById("about-karin").className += " about_indi";}
+
+	function showAV() {
+		document.getElementById("a-thumb").className = "hide";
+		document.getElementById("k-thumb").className = "hide";
+		document.getElementById("s-thumb").className = "hide";
+		document.getElementById("directionz").className = "hide";
+		document.getElementById("group_photo").className = "hide";
+		document.getElementById("about-avery").className = "show"; 
+		document.getElementById("group-thumb").className = "show"; 
+		document.getElementById("about-avery").className += " about_indi";}
+
+	function showSI() {
+		document.getElementById("a-thumb").className = "hide";
+		document.getElementById("k-thumb").className = "hide";
+		document.getElementById("s-thumb").className = "hide";
+		document.getElementById("directionz").className = "hide";
+		document.getElementById("group_photo").className = "hide";
+		document.getElementById("about-simona").className = "show"; 
+		document.getElementById("group-thumb").className = "show"; 
+		document.getElementById("about-simona").className += " about_indi";}
+
+	function showGroup() {
+		document.getElementById("about-avery").className = "hide";
+		document.getElementById("about-simona").className = "hide";
+		document.getElementById("about-karin").className = "hide"; 
+		document.getElementById("group-thumb").className = "hide"; 
+		document.getElementById("group_photo").className = "show";
+		document.getElementById("a-thumb").className = "show";
+		document.getElementById("a-thumb").className += " avery about_photo";
+		document.getElementById("k-thumb").className = "show";
+		document.getElementById("k-thumb").className += " karin about_photo";
+		document.getElementById("s-thumb").className = "show";
+		document.getElementById("s-thumb").className += " simona about_photo";
+		document.getElementById("directionz").className = "show";
+	}
+</script>
+</html>
+
