@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+<link href='http://fonts.googleapis.com/css?family=Tangerine:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+	<div class="photo_background" id="contact_background">
+	<div id="wrapper">
+		<div id="header">
+			<div class="navigation" id="navigation">
+				<div class="logo_small hide" id="logo-menu">
+					<a href="../index2.html" class="no_bar">
+						<img src="../assets/logo_small.png" alt="Vows Events Logo">
+					</a>
+				</div>
+				<div id="nav-gallery" class="hide">
+					<a href="gallery.html" class="no_bar">
+						<h1 class="header">Gallery</h1>
+					</a>
+				</div>
+				<div id="nav-services">
+					<a href="services.html" class="no_bar">
+						<h1 class="header">Services</h1>
+					</a>
+				</div>
+				<div id="nav-about_us" class="hide">
+					<a href="about.html" class="no_bar">
+						<h1 class="header">About Us</h1>
+					</a>
+				</div>
+				<div id="nav-testimony" class="hide">
+					<a href="testimony.html" class="no_bar">
+						<h1 class="header">Testimony</h1>
+					</a>
+				</div>
+				<div class="logo" id="logo-big">
+					<a href="../index2.html" class="no_bar">
+						<img src="../assets/logo.png" alt="Vows Events Logo">
+					</a>
+				</div>
+
+				<div id="nav-menu">
+					<h1 class="header" style="cursor: pointer;" onClick="showMenu()">Menu</h1>
+				</div>
+				
+				<div id="nav-blog" class="hide">
+					<a href="http://vowsevents.tumblr.com" class="no_bar">
+						<h1 class="header">Blog</h1>
+					</a>
+				</div>
+				<div id="nav-contact" class="hide">
+					<a href="contact.html" class="no_bar">
+						<h1 class="header no_pad blue">Contact</h1>
+					</a>
+				</div>
+			</div>
+			
+			<div class="swoosh">
+				<img src="../assets/swoosh_border.png" id="swoosh-big" class= "show" alt="Blue Horizontal Border">
+				<img src="../assets/swoosh_border_menu.png" id="swoosh-menu" class= "hide" alt="Blue Horizontal Border">
+			</div>
+		</div>
+
+		<form>
+		<div id="contact-form">
+			<div class="contact-column" style="margin-left: 160px">
+				<p class="thin">Your Name
+				<input type="text" name="name">
+				<br/>
+
+				Email Address
+				<input type="text" name="email">
+				<br/>
+
+				<div id="contact-router">
+					<p class="thin">
+					<span style="display: block; margin: 26px 0 -31px 0;">Are you (<span class="blue">please click one</span>)
+					<span class="contact-navigation" onclick="showWQ()">planning an event</span>
+					<span class="contact-navigation" id="other_message" onclick="showOM()">other</span></span>
+				</p>
+				</div>
+
+
+				<div id="wedding-questions" class="hide">
+					<p class="thin">
+					<span style="display: block; margin: 26px 0 -31px 0;">Are you (<span class="blue">please click one</span>)
+					willing to answer a few more
+					thorough questions right now?</span>
+					<br/>
+					<span class="contact-navigation another-question-1" id="AQ1" onclick="showAQ1()">yes</span>
+					<span class="contact-navigation" onclick="showOM()">no</span>
+				</div>
+				</p>
+			</div>
+			<div class="contact-column hide" id="om">
+				<p class="thin"> Your Message 
+				<textarea class="multi_line" name="other_message" rows="5" columns="100"></textarea>
+				</p>
+			</div>
+			<div class="contact-column hide" id="another-question-1">
+				<p class="thin">
+					What type of event are you planning? (<span class="blue">please click one</span>)
+					<span class="contact-navigation">Wedding</span>
+					<span class="contact-navigation">Social</span>
+					<span class="contact-navigation">Corporate</span>
+					<span class="contact-navigation">Other <span style="color: #bbbdc0">(describe below)</span></span>
+					<input type="text" name="other">
+					<br/>
+					<span style="margin-top: 18px; margin-bottom: -27px; display: block;">Date range for your
+						event?</span>
+					<br/>
+					<input type="text" name="date-range">
+					
+					<br/>
+					<span style="margin-top: 18px; margin-bottom: -27px; display: block;">What's your budget?</span>
+					<br/>
+					<input type="text" name="budget">
+				</p>
+			</div>
+
+
+			<div class="contact-column hide" id="another-question-2">
+				<p class="thin">
+
+					If you've selected a venue already, please
+					describe below.
+					<textarea class="multi_line" name="hobbies"></textarea>
+					
+					<br/><span class="would_you">
+					Would you like us to email
+					you the full questionnaire?
+					</span><br/>
+					<span class="contact-navigation another-question-3">yes</span>
+					<span class="contact-navigation">no</span>
+				</p>
+			</div>
+			<div style="text-align: center">
+				<h1 class="dg">Get in Touch</h1>
+
+				<span class="button">Submit</span>
+			</div>
+		</div>
+		</form>
+	</div>
+	</div>
+	<div id="footer">
+		<p class="thin blue">&copy; Vows Events, 2013</p>
+	</div>
+</body>
+
+<script>
+	function showMenu() {
+		document.getElementById("swoosh-big").className = "hide";
+		document.getElementById("swoosh-menu").className = "show";
+		document.getElementById("logo-big").className = "hide";
+		document.getElementById("logo-menu").className = "show";
+		document.getElementById("navigation").className = "navigation-menu";
+		document.getElementById("nav-services").className += " pad-right";
+		document.getElementById("nav-gallery").className = "show";
+		document.getElementById("nav-gallery").className += " pad-right";
+		document.getElementById("nav-testimony").className = "show";
+		document.getElementById("nav-testimony").className += " pad-right";
+		document.getElementById("nav-about_us").className = "show";
+		document.getElementById("nav-about_us").className += " pad-right";
+		document.getElementById("nav-menu").className += " pad-right";
+		document.getElementById("nav-blog").className = "show";
+		document.getElementById("nav-blog").className += " pad-right";
+		document.getElementById("nav-contact").className = "show";
+		document.getElementById("logo-menu").className += " logo_small"; }
+	function showAQ1() {
+		document.getElementById("another-question-1").className = "show";
+		document.getElementById("another-question-1").className += " contact-column";
+		document.getElementById("another-question-2").className = "show";
+		document.getElementById("another-question-2").className += " contact-column";
+		document.getElementById("AQ1").className = "yes_to_AQ"; }
+	function showWQ() {
+		document.getElementById("contact-router").className = "hide";
+		document.getElementById("wedding-questions").className = "show"; }
+	function showOM() {
+		document.getElementById("om").className = "show";
+		document.getElementById("om").className += " contact-column";
+		document.getElementById("other_message").className = "yes_to_AQ"; }
+
+
+</script>
+
+</html>

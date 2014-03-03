@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+<link href='http://fonts.googleapis.com/css?family=Tangerine:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+	<div id="wrapper">
+		<div id="header">
+			<div class="navigation" id="navigation">
+				<div class="logo_small hide" id="logo-menu">
+					<a href="../index2.html" class="no_bar">
+						<img src="../assets/logo_small.png" alt="Vows Events Logo">
+					</a>
+				</div>
+				<div id="nav-gallery" class="hide">
+					<a href="gallery.html" class="no_bar">
+						<h1 class="header">Gallery</h1>
+					</a>
+				</div>
+				<div id="nav-services">
+					<a href="html/services.html" class="no_bar">
+						<h1 class="header">Services</h1>
+					</a>
+				</div>
+				<div id="nav-about_us" class="hide">
+					<a href="about.html" class="no_bar">
+						<h1 class="header">About Us</h1>
+					</a>
+				</div>
+				<div id="nav-testimony" class="hide">
+					<a href="testimony.html" class="no_bar blue">
+						<h1 class="header">Testimony</h1>
+					</a>
+				</div>
+				<div class="logo" id="logo-big">
+					<a href="../index2.html" class="no_bar">
+						<img src="../assets/logo.png" alt="Vows Events Logo">
+					</a>
+				</div>
+
+				<div id="nav-menu">
+					<h1 class="header" style="cursor: pointer;" onClick="showMenu()">Menu</h1>
+				</div>
+				
+				<div id="nav-blog" class="hide">
+					<a href="http://vowsevents.tumblr.com" class="no_bar">
+						<h1 class="header">Blog</h1>
+					</a>
+				</div>
+				<div id="nav-contact" class="hide">
+					<a href="contact.html" class="no_bar">
+						<h1 class="header no_pad">Contact</h1>
+					</a>
+				</div>
+			</div>
+			
+			<div class="swoosh">
+				<img src="../assets/swoosh_border.png" id="swoosh-big" class= "show" alt="Blue Horizontal Border">
+				<img src="../assets/swoosh_border_menu.png" id="swoosh-menu" class= "hide" alt="Blue Horizontal Border">
+			</div>
+		</div>
+		<div id="testimony-wrapper">
+			<div id="testimony-header">
+				<h1 class="dg">Testimonials</h1>
+			</div>
+
+			<div id="testimony">
+				<div>
+					<p class="thin"><span class="blue big">Dr. &amp; Mrs. Douglas Horbelt</span>
+						<br/>
+				"We can wholeheartedly recommend your company, Vows, to anyone wishing to entrust
+				their event planning to you. Your attention to detail and the professional way
+				you handled this event will always be remembered."
+					<br/>
+					<br/>
+
+				<a href="testimony_sample3.html">read testimonial</a>
+				<a href="testimony.html">back </a>
+					</p>
+				</div>
+				
+				
+				
+				</div>
+			</div>
+			<div id="testimony-sm">
+				<a href="http://www.pinterest.com/vowseventsdenvr/" target="_blank" class="no_bar">
+					<span class="pint"></span>
+				</a>
+				<a href="https://twitter.com/VowsEventsDenvr" target="_blank" class="no_bar">
+					<span class="fbook"></span>
+				</a>
+				<a href="https://www.facebook.com/vowsevents" class ="no_bar" target="_blank">
+					<span class="twit"></span>
+				</a>	
+			</div>
+		</div>
+
+
+	</div>
+	<div id="footer">
+		<p class="thin blue">&copy; Vows Events, 2013</p>
+	</div>
+</body>
+
+<script>
+	function showMenu() {
+		document.getElementById("swoosh-big").className = "hide";
+		document.getElementById("swoosh-menu").className = "show";
+		document.getElementById("logo-big").className = "hide";
+		document.getElementById("logo-menu").className = "show";
+		document.getElementById("navigation").className = "navigation-menu";
+		document.getElementById("nav-services").className += " pad-right";
+		document.getElementById("nav-gallery").className = "show";
+		document.getElementById("nav-gallery").className += " pad-right";
+		document.getElementById("nav-testimony").className = "show";
+		document.getElementById("nav-testimony").className += " pad-right";
+		document.getElementById("nav-about_us").className = "show";
+		document.getElementById("nav-about_us").className += " pad-right";
+		document.getElementById("nav-menu").className += " pad-right";
+		document.getElementById("nav-blog").className = "show";
+		document.getElementById("nav-blog").className += " pad-right";
+		document.getElementById("nav-contact").className = "show";
+		document.getElementById("logo-menu").className += " logo_small"; }
+</script>

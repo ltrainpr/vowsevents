@@ -11,23 +11,22 @@
 			<div>
 				<p class="thin"><span class="blue big">Jen &amp; Rob</span>
 					<br/>
-			"Our special day was September and thanks to Vows, it was perfect."
+					<%= @jen_rob.quote %>
 				<br/>
 				<br/>
 
 					<span class="contact-navigation show-testimony" >read testimonial</span>
+					<%= link_to "read testimonial", testimony_path(id: 1), class: "contact-navigation show-testimony" %>
 
 				</p>
 			</div>
 			<div>
 			<p class="thin"><span class="blue big">Rhonda &amp; Maynard</span>
 				<br/>
-			"I am writing to you Avery to thank you for the great job you did for us in
-					our wedding planning."
-
-
-				<span class="contact-navigation show-testimony" >read testimonial</span>
-				<span class="contact-navigation show-testimony" >read testimonials</span>
+					<%= @rhonda_maynard.quote %>
+				<br/>
+					<%= link_to "read testimonial", testimony_path(id: 2), class: "contact-navigation show-testimony" %>
+					<%= link_to "read testimonials", testimony_path(id: 3), class: "contact-navigation show-testimony" %>
 			</div>
 		</div>
 		<div id="testimony-sm">
