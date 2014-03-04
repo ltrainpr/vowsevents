@@ -1,5 +1,5 @@
 	<script type="text/javascript">
-		var centerImages = function () {
+		$(window).load(function centerImages() {
 	    var y = document.getElementById("center").offsetWidth;
 	    var z = document.getElementById("left").offsetWidth;
 	    var right = document.getElementById("right").offsetWidth;
@@ -28,8 +28,7 @@
         }, 500);
 	    });
 		});
-		$(window).load(centerImages)
-		$(window).bind('page:change', centerImages)
+		// $(window).bind('page:change', center)
 	</script>
 
 		<div id="wrapper">
