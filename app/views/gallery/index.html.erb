@@ -1,5 +1,6 @@
 	<script type="text/javascript">
-		$(window).load(function centerImages() {
+		$(window).load(centerImages);
+		function centerImages() {
 	    var y = document.getElementById("center").offsetWidth;
 	    var z = document.getElementById("left").offsetWidth;
 	    var right = document.getElementById("right").offsetWidth;
@@ -46,11 +47,11 @@
 					<input type="button" class="slide-left" value="&laquo; Slide Left" /> 
 			    <input type="button" class="slide-center" value="Center"> 
 			    <input type="button" class="slide-right" value="Slide Right &raquo;"> 
-					<div id="measure" onload="centerImages();">
+					<div id="measure">
 						<% if @photo1 && @photo2 && @photo3 %>
 							<%= image_tag @photo1.s3_image_url.url(:medium), id: "left" %>
 							<%= image_tag @photo2.s3_image_url.url(:medium), id: "center" %>	
-							<%= image_tag @photo3.s3_image_url.url(:medium), id: "right" %>
+							<%= image_tag @photo3.s3_image_url.url(:medium), id: "right", onload="centerImages();" %>
 						<% end %>
 					</div>
 				</div>
