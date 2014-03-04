@@ -15,7 +15,7 @@
 					<input type="button" class="slide-left" value="&laquo; Slide Left" /> 
 			    <input type="button" class="slide-center" value="Center"> 
 			    <input type="button" class="slide-right" value="Slide Right &raquo;"> 
-					<div id="measure">
+					<div id="measure" onload="centerImages();">
 						<% if @photo1 && @photo2 && @photo3 %>
 							<%= image_tag @photo1.s3_image_url.url(:medium), id: "left" %>
 							<%= image_tag @photo2.s3_image_url.url(:medium), id: "center" %>	
@@ -59,7 +59,7 @@
 		</div>
 
 	<script type="text/javascript">
-		function centerImages() {
+		$(window).load(function centerImages() {
 	    var y = document.getElementById("center").offsetWidth;
 	    var z = document.getElementById("left").offsetWidth;
 	    var right = document.getElementById("right").offsetWidth;
@@ -88,12 +88,17 @@
         }, 500);
 	    });
 		});
+	</script>
+	
+	<script type="text/javascript">
+
+		// SHOW GALLERY DETAILS (or WEDDING DETAILS)
+		// NOTE: AT THE MOMENT, THIS RESETS TO THE TOP OF THE PAGE. 
+		// IDEALLY IT WON'T
 
 		function showGD() {
 			document.getElementById("gds").className = "hide";
 			document.getElementById("gd").className = "show";
 			document.getElementById("gd").className += " gallery-details";
 		}
-		
-		window.onload=centerImages;
 	</script>
