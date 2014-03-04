@@ -5,7 +5,7 @@ $(window).load(function centerImages() {
   // find what lies beyond the halfway point of the 1000px container div
   // by subtracting half of it from half of the center image and all of the left image
   var x = (y / 2) + z - 500;
-  var showing = 1000 - y - (z-x) - right
+  var showing = 1000 - y - (z-x) - right;
   // set the left margin of the image container div as that surplus
   document.getElementById("measure").style.marginLeft= "-"+x+"px";
   
