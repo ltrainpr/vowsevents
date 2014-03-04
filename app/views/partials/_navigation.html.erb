@@ -1,7 +1,9 @@
 <div id="header">
 	<div class="navigation" id="navigation">
 		<div class="logo_small hide nav-item" id="logo-menu">
-			<img src="assets/logo_small.png" alt="Vows Events Logo">
+			<%= link_to root_path do %>
+				<img src="assets/logo_small.png" alt="Vows Events Logo">
+			<% end %>
 		</div>
 		<div id="nav-gallery" class="hide nav-item pad-right">
 			<%= link_to gallery_index_path, :class => "no_bar" do %>
@@ -25,7 +27,9 @@
 			<% end %>
 		</div>
 		<div class="logo show nav-item" id="logo-big">
-			<img src="assets/logo.png" alt="Vows Events Logo">
+			<%= link_to root_path do %>
+				<img src="assets/logo.png" alt="Vows Events Logo">
+			<% end %>
 		</div>
 
 		<div id="nav-menu" class="menu-services">
