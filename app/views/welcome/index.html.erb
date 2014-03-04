@@ -29,9 +29,10 @@
 						</p>
 					</div>
 					<div class="right">
-						<p>Jersey Gablov Wedding <br/>
-						<a href="#" class="thin">view gallery</a>
-						<a href="#" class="thin">read testimonial</a>
+						<p><%= @event.name %> <br/>
+							<%= link_to "view gallery", gallery_index_path(event_id: @event.id), class: "thin"%>
+							<%= link_to "read testimonial", testimony_index_path(event_id: @event.id), class: "thin"%>
+						</p>
 					</div>
 				</div>
 				<div class="sundry-social_media">
