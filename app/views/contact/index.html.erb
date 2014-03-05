@@ -3,103 +3,161 @@
 			<%= render "partials/navigation" %>
 
 			<form>
-				<div id="contact-form">
-					<div class="contact-column" style="margin-left: 160px">
-						<p class="thin">Your Name
-							<input type="text" name="name">
-							<br/>
+		<div id="contact-form">
+			<div class="contact-column" style="margin-left: 160px">
+				<p class="thin">Your Name
+				<input type="text" name="name">
+				<br/>
 
-							Email Address
-							<input type="text" name="email">
-							<br/>
+				Email Address
+				<input type="text" name="email">
+				<br/>
 
-							<div id="contact-router">
-								<p class="thin">
-									<span style="display: block; margin: 26px 0 -31px 0;">Are you (<span class="blue">please click one</span>)
-									<span class="contact-navigation" onclick="showWQ()">planning an event</span>
-									<span class="contact-navigation" id="other_message" onclick="showOM()">other</span></span>
-								</p>
-							</div>
-						</p>
-
-
-						<div id="wedding-questions" class="hide">
-							<p class="thin">
-								<span style="display: block; margin: 26px 0 -31px 0;">Are you (<span class="blue">please click one</span>)
-								willing to answer a few more
-								thorough questions right now?</span>
-								<br/>
-								<span class="contact-navigation another-question-1" id="AQ1" onclick="showAQ1()">yes</span>
-								<span class="contact-navigation" onclick="showOM()">no</span>
-							</p>
-						</div><!-- wedding-questions -->
-					</div><!-- contact-column -->
-					<div class="contact-column hide" id="om">
-						<p class="thin"> Your Message 
-							<textarea class="multi_line" name="other_message" rows="5" columns="100"></textarea>
-						</p>
-					</div>
-					<div class="contact-column hide" id="another-question-1">
-						<p class="thin">
-							What type of event are you planning? (<span class="blue">please click one</span>)
-							<span class="contact-navigation">Wedding</span>
-							<span class="contact-navigation">Social</span>
-							<span class="contact-navigation">Corporate</span>
-							<span class="contact-navigation">Other <span style="color: #bbbdc0">(describe below)</span></span>
-							<input type="text" name="other">
-							<br/>
-							<span style="margin-top: 18px; margin-bottom: -27px; display: block;">Date range for your
-								event?</span>
-							<br/>
-							<input type="text" name="date-range">
-							
-							<br/>
-							<span style="margin-top: 18px; margin-bottom: -27px; display: block;">What's your budget?</span>
-							<br/>
-							<input type="text" name="budget">
-						</p>
-					</div>
+				<div id="contact-router">
+					<p class="thin">
+					<span style="display: block; margin: 26px 0 -31px 0;">Are you (<span class="blue">please click one</span>)
+					<span class="contact-navigation" onclick="showWQ()">planning an event</span>
+					<span class="contact-navigation" id="other_message" onclick="showOM()">other</span></span>
+				</p>
+				</div>
 
 
-					<div class="contact-column hide" id="another-question-2">
-						<p class="thin">
+				<div id="wedding-questions" class="hide">
+					<p class="thin">
+					<span style="display: block; margin: 26px 0 -31px 0;">Are you (<span class="blue">please click one</span>)
+					willing to answer a few more
+					thorough questions right now?</span>
+					<br/>
+					<span class="contact-navigation another-question-1" id="AQ1" onclick="showAQ1()">yes</span>
+					<span class="contact-navigation" onclick="showOM()">no</span>
+				</div>
+				</p>
+			</div>
+			<div class="contact-column hide" id="om">
+				<p class="thin"> Your Message 
+				<textarea class="message_multi_line" name="other_message" rows="5" columns="100"></textarea>
+				</p>
+			</div>
+			<div class="contact-column hide" id="another-question-1">
+				<p class="thin">
+					What type of event are you planning? (<span class="blue">select one</span>)
+					<span class="contact-navigation" id="event-wedding" onclick="selectWD()">Wedding</span>
+					<span class="contact-navigation" id="event-social" onclick="selectSO()">Social</span>
+					<span class="contact-navigation" id="event-corporate" onclick="selectCO()">Corporate</span>
+					<span class="contact-navigation" id="event-other" onclick="selectOT()">Other <span id=
+						"other_direction" class="hide" style="color: #bbbdc0">(describe below)</span></span>
+					<input id="other_event_type" type="text" name="other" class="hide">
+					<br/>
+					<span style="margin-top: 18px; margin-bottom: -27px; display: block;">Date range for your
+						event?</span>
+					<br/>
+					<input type="text" name="date-range">
+					
+					<br/>
+					<span style="margin-top: 18px; margin-bottom: -27px; display: block;">What's your budget?</span>
+					<br/>
+					<input type="text" name="budget">
+				</p>
+			</div>
 
-							If you've selected a venue already, please
-							describe below.
-							<textarea class="multi_line" name="hobbies"></textarea>
-							
-							<br/><span class="would_you">
-							Would you like us to email
-							you the full questionnaire?
-							</span><br/>
-							<span class="contact-navigation another-question-3">yes</span>
-							<span class="contact-navigation">no</span>
-						</p>
-					</div>
-					<div style="text-align: center">
-						<h1 class="dg">Get in Touch</h1>
 
-						<span class="button">Submit</span>
-					</div>
-				</div><!-- contact-form -->
-			</form>
+			<div class="contact-column hide" id="another-question-2">
+				<p class="thin">
+
+					If you've selected a venue already, please
+					describe below.
+					<textarea class="multi_line" name="hobbies"></textarea>
+					
+					<br/><span class="would_you">
+					Would you like us to email
+					you the full questionnaire?
+					</span><br/>
+					<span class="contact-navigation another-question-3" onclick="yesQ()" id="yesQ">yes</span>
+					<span class="contact-navigation" onclick="noQ()" id="noQ">no</span>
+				</p>
+			</div>
+			<div style="text-align: center">
+				<h1 class="dg">Get in Touch</h1>
+
+				<span class="button">Submit</span>
+			</div>
 		</div>
-		<div id="footer">
-			<p class="thin blue">&copy; Vows Events, 2013</p>
-		</div>
+		</form>
+	</div>
+	</div>
+	<div id="footer">
+		<p class="thin blue">&copy; Vows Events, 2013</p>
+	</div>
 
-		<script>
-			function showAQ1() {
-				document.getElementById("another-question-1").className = "show";
-				document.getElementById("another-question-1").className += " contact-column";
-				document.getElementById("another-question-2").className = "show";
-				document.getElementById("another-question-2").className += " contact-column";
-				document.getElementById("AQ1").className = "yes_to_AQ"; }
-			function showWQ() {
-				document.getElementById("contact-router").className = "hide";
-				document.getElementById("wedding-questions").className = "show"; }
-			function showOM() {
-				document.getElementById("om").className = "show";
-				document.getElementById("om").className += " contact-column";
-				document.getElementById("other_message").className = "yes_to_AQ"; }
-		</script>
+
+<script>
+	function showMenu() {
+		document.getElementById("swoosh-big").className = "hide";
+		document.getElementById("swoosh-menu").className = "show";
+		document.getElementById("logo-big").className = "hide";
+		document.getElementById("logo-menu").className = "show";
+		document.getElementById("navigation").className = "navigation-menu";
+		document.getElementById("nav-services").className += " pad-right";
+		document.getElementById("nav-gallery").className = "show";
+		document.getElementById("nav-gallery").className += " pad-right";
+		document.getElementById("nav-testimony").className = "show";
+		document.getElementById("nav-testimony").className += " pad-right";
+		document.getElementById("nav-about_us").className = "show";
+		document.getElementById("nav-about_us").className += " pad-right";
+		document.getElementById("nav-menu").className += " pad-right";
+		document.getElementById("nav-blog").className = "show";
+		document.getElementById("nav-blog").className += " pad-right";
+		document.getElementById("nav-contact").className = "show";
+		document.getElementById("logo-menu").className += " logo_small"; }
+	function showAQ1() {
+		document.getElementById("another-question-1").className = "show";
+		document.getElementById("another-question-1").className += " contact-column";
+		document.getElementById("another-question-2").className = "show";
+		document.getElementById("another-question-2").className += " contact-column";
+		document.getElementById("AQ1").className = "yes_to_AQ"; }
+	function yesQ() { 
+		document.getElementById("yesQ").className = "yes_to_AQ";
+		document.getElementById("noQ").className = "contact-navigation"; }
+	function noQ() { 
+		document.getElementById("noQ").className = "yes_to_AQ"; 
+		document.getElementById("yesQ").className = "contact-navigation";}
+	function selectWD() { 
+		document.getElementById("event-wedding").className = "yes_to_AQ";
+		document.getElementById("event-social").className = "contact-navigation";
+		document.getElementById("event-corporate").className = "contact-navigation" ;
+		document.getElementById("event-other").className = "contact-navigation" 
+		document.getElementById("other_direction").className = "hide";
+		document.getElementById("other_event_type").className = "hide";}
+	function selectCO() { 
+		document.getElementById("event-corporate").className = "yes_to_AQ";
+		document.getElementById("event-social").className = "contact-navigation";
+		document.getElementById("event-wedding").className = "contact-navigation" ;
+		document.getElementById("event-other").className = "contact-navigation" 
+		document.getElementById("other_direction").className = "hide";
+		document.getElementById("other_event_type").className = "hide"; }
+	function selectSO() { 
+		document.getElementById("event-social").className = "yes_to_AQ";
+		document.getElementById("event-wedding").className = "contact-navigation";
+		document.getElementById("event-corporate").className = "contact-navigation" ;
+		document.getElementById("event-other").className = "contact-navigation" 
+		document.getElementById("other_direction").className = "hide";
+		document.getElementById("other_event_type").className = "hide"; }
+	function selectOT() {
+		document.getElementById("event-other").className = "yes_to_AQ"; 
+		document.getElementById("other_direction").className = "show";
+		document.getElementById("other_event_type").className = "show";
+		document.getElementById("event-social").className = "contact-navigation";
+		document.getElementById("event-corporate").className = "contact-navigation" ;
+		document.getElementById("event-wedding").className = "contact-navigation" }
+	function showWQ() {
+		document.getElementById("contact-router").className = "hide";
+		document.getElementById("wedding-questions").className = "show";
+		document.getElementById("om").className= "hide" }
+	function showOM() {
+		document.getElementById("om").className = "show";
+		document.getElementById("om").className += " contact-column";
+		document.getElementById("other_message").className = "yes_to_AQ";
+		document.getElementById("wedding_questions").className = "hide"; }
+
+
+</script>

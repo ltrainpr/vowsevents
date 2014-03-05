@@ -47,7 +47,7 @@
 					<input type="button" class="slide-left" value="&laquo; Slide Left" /> 
 			    <input type="button" class="slide-center" value="Center"> 
 			    <input type="button" class="slide-right" value="Slide Right &raquo;"> 
-					<div id="measure" onload="centerImages();">
+					<div id="measure">
 						<% if @photo1 && @photo2 && @photo3 %>
 							<%= image_tag @photo1.s3_image_url.url(:medium), id: "left" %>
 							<%= image_tag @photo2.s3_image_url.url(:medium), id: "center" %>	

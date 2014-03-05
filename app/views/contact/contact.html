@@ -53,7 +53,7 @@
 					</a>
 				</div>
 				<div id="nav-contact" class="hide">
-					<a href="hcontact.html" class="no_bar">
+					<a href="contact.html" class="no_bar">
 						<h1 class="header no_pad blue">Contact</h1>
 					</a>
 				</div>
@@ -98,17 +98,18 @@
 			</div>
 			<div class="contact-column hide" id="om">
 				<p class="thin"> Your Message 
-				<textarea class="multi_line" name="other_message" rows="5" columns="100"></textarea>
+				<textarea class="message_multi_line" name="other_message" rows="5" columns="100"></textarea>
 				</p>
 			</div>
 			<div class="contact-column hide" id="another-question-1">
 				<p class="thin">
-					What type of event are you planning? (<span class="blue">please click one</span>)
-					<span class="contact-navigation">Wedding</span>
-					<span class="contact-navigation">Social</span>
-					<span class="contact-navigation">Corporate</span>
-					<span class="contact-navigation">Other <span style="color: #bbbdc0">(describe below)</span></span>
-					<input type="text" name="other">
+					What type of event are you planning? (<span class="blue">select one</span>)
+					<span class="contact-navigation" id="event-wedding" onclick="selectWD()">Wedding</span>
+					<span class="contact-navigation" id="event-social" onclick="selectSO()">Social</span>
+					<span class="contact-navigation" id="event-corporate" onclick="selectCO()">Corporate</span>
+					<span class="contact-navigation" id="event-other" onclick="selectOT()">Other <span id=
+						"other_direction" class="hide" style="color: #bbbdc0">(describe below)</span></span>
+					<input id="other_event_type" type="text" name="other" class="hide">
 					<br/>
 					<span style="margin-top: 18px; margin-bottom: -27px; display: block;">Date range for your
 						event?</span>
@@ -134,8 +135,8 @@
 					Would you like us to email
 					you the full questionnaire?
 					</span><br/>
-					<span class="contact-navigation another-question-3">yes</span>
-					<span class="contact-navigation">no</span>
+					<span class="contact-navigation another-question-3" onclick="yesQ()" id="yesQ">yes</span>
+					<span class="contact-navigation" onclick="noQ()" id="noQ">no</span>
 				</p>
 			</div>
 			<div style="text-align: center">
@@ -177,13 +178,49 @@
 		document.getElementById("another-question-2").className = "show";
 		document.getElementById("another-question-2").className += " contact-column";
 		document.getElementById("AQ1").className = "yes_to_AQ"; }
+	function yesQ() { 
+		document.getElementById("yesQ").className = "yes_to_AQ";
+		document.getElementById("noQ").className = "contact-navigation"; }
+	function noQ() { 
+		document.getElementById("noQ").className = "yes_to_AQ"; 
+		document.getElementById("yesQ").className = "contact-navigation";}
+	function selectWD() { 
+		document.getElementById("event-wedding").className = "yes_to_AQ";
+		document.getElementById("event-social").className = "contact-navigation";
+		document.getElementById("event-corporate").className = "contact-navigation" ;
+		document.getElementById("event-other").className = "contact-navigation" 
+		document.getElementById("other_direction").className = "hide";
+		document.getElementById("other_event_type").className = "hide";}
+	function selectCO() { 
+		document.getElementById("event-corporate").className = "yes_to_AQ";
+		document.getElementById("event-social").className = "contact-navigation";
+		document.getElementById("event-wedding").className = "contact-navigation" ;
+		document.getElementById("event-other").className = "contact-navigation" 
+		document.getElementById("other_direction").className = "hide";
+		document.getElementById("other_event_type").className = "hide"; }
+	function selectSO() { 
+		document.getElementById("event-social").className = "yes_to_AQ";
+		document.getElementById("event-wedding").className = "contact-navigation";
+		document.getElementById("event-corporate").className = "contact-navigation" ;
+		document.getElementById("event-other").className = "contact-navigation" 
+		document.getElementById("other_direction").className = "hide";
+		document.getElementById("other_event_type").className = "hide"; }
+	function selectOT() {
+		document.getElementById("event-other").className = "yes_to_AQ"; 
+		document.getElementById("other_direction").className = "show";
+		document.getElementById("other_event_type").className = "show";
+		document.getElementById("event-social").className = "contact-navigation";
+		document.getElementById("event-corporate").className = "contact-navigation" ;
+		document.getElementById("event-wedding").className = "contact-navigation" }
 	function showWQ() {
 		document.getElementById("contact-router").className = "hide";
-		document.getElementById("wedding-questions").className = "show"; }
+		document.getElementById("wedding-questions").className = "show";
+		document.getElementById("om").className= "hide" }
 	function showOM() {
 		document.getElementById("om").className = "show";
 		document.getElementById("om").className += " contact-column";
-		document.getElementById("other_message").className = "yes_to_AQ"; }
+		document.getElementById("other_message").className = "yes_to_AQ";
+		document.getElementById("wedding_questions").className = "hide"; }
 
 
 </script>
