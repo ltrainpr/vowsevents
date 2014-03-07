@@ -30,7 +30,7 @@
 					</div>
 					<div class="right">
 						<p><%= @event.name %> <br/>
-							<%= link_to "view gallery", gallery_index_path(event_id: @event.id), class: "thin"%>
+							<%= link_to "view gallery", gallery_index_path(event_id: @event.id), :onClick => "history.go(0)", class: "thin"%>
 							<%= link_to "read testimonial", testimony_index_path(event_id: @event.id), class: "thin"%>
 						</p>
 					</div>
