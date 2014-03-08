@@ -67,8 +67,8 @@
 
 		<div id="gallery-navigation">
 			<ul>
-				<li class="first">Rhonda &amp; Maynard </li>
-				<a href="gallery3.html"><li>Lionel &amp; Karin</li></a>
+				<li class="first">Lionel &amp; Karin </li>
+				<a href="gallery.html"><li>Rhonda &amp; Maynard</li></a>
 				<a href="gallery2.html"><li>Jen &amp; Rob</li></a>
 			</ul>
 			<h1 class="dg">Gallery</h1>
@@ -78,9 +78,9 @@
 			<input type="button" id="slide-right" class="slide-right gallery_control">
 			<div class="gallery-images">
 				<div id="measure">		
-				<img src="../assets/photos/lafleur-1.jpg" id="left">
-				<img src="../assets/photos/lafleur-3.jpg" id="center">
-				<img src="../assets/photos/lafleur-2.jpg" id="right">
+				<img src="../assets/photos/karin-1.jpg" id="left">
+				<img src="../assets/photos/karin-3.jpg" id="center">
+				<img src="../assets/photos/karin-2.jpg" id="right">
 			</div>
 			</div>
 		</div>
@@ -92,13 +92,28 @@
 				</p>
 			</div>
 
-			<div class="hide gallery-details" id="gd">	
+
+
+
+			<div class="hide gallery-details" id="gd" style="max-width: 600px; display: inline-block">	
 				
 					<p class="thin">
-						Venue: Backyard<br/>   Photographer: <a class="blue no_bar" href="mailto:deannas@acegroup.cc
-" target="_blank">Deanna Stennis</a>
-				</p>
-		</div>
+						Venue: 
+						<a href="http://www.secretsresorts.com/maroma-beach-riviera-cancun" target="_blank" class="no_bar blue"> Secret's Maramoa Beach </a>, 
+
+						Photographer: <a href="http://www.JuanPhotos.com" target="_blank" class="no_bar blue">Juan Photos </a>,
+
+						Florist: <a href="http://www.mayafloral.com" target="_blank" class="no_bar blue">Maya Floral</a>, 
+
+						Videographer: <a href="http://www.cancunweddingvideo.com" target="_blank" class="no_bar blue">
+						Cancun Wedding Video</a>
+
+
+
+					</p>
+		
+			
+			</div>
 		</div>
 	</div>
 	</div>
@@ -148,7 +163,7 @@
 	// set the left position of the left slider equal to 1000px minus the center image
 	// width divided by two
 	var l = (1000 - y) / 2 - 57;
-	var r = l - 8;
+	var r = l - 8
 	document.getElementById("slide-left").style.left=l
 	document.getElementById("slide-right").style.right=r }
 

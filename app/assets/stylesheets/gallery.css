@@ -1,3 +1,18 @@
 #measure {
 	position: relative;
 }
+
+.photos {
+	position: absolute;
+	z-index: 0;
+	overflow: hidden;
+}
+
+.active {
+	position: relative;
+	z-index: 1;
+}
+
+#photo_count {
+	display: none;
+}

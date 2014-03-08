@@ -45,8 +45,8 @@ a, span.contact-navigation, span.yes_to_AQ, li {
 	display: block;
 	cursor: pointer;
 	-webkit-transition: all .3s ease;
-	-moz-transition: all .3s ease
-	-o-transition: all .3s ease
+	-moz-transition: all .3s ease;
+	-o-transition: all .3s ease;
 	transition: all .3s ease; }
 a, .contact-navigation { background-position: 0px 0px; }
 a { background-image: url('../assets/underline.png');}
@@ -288,7 +288,9 @@ div#contact-form .contact-column {
 	width: 200px; }
 div#contact-form .button {
 	margin-right: 43px;
-	margin-top: 313px; }
+	margin-top: 313px;
+	font-weight: 400;
+	width: 112px; }
 input, textarea { 
 	font-size: 13pt;
 	outline: none;
@@ -300,13 +302,14 @@ input, textarea {
 	width: 200px; }
 input:focus{ border-bottom: 1px #4271a5 solid; }
 textarea { border-bottom: none; }
-textarea.multi_line { 
+textarea.multi_line, textarea.message_multi_line { 
 	background-image: url('../assets/underline_background.png');
 	background-repeat: repeat-y;
 	height: 153px;
 	line-height: 2.25em;
 	margin-top: -6px;
 	resize: none; }
+textarea.message_multi_line {height: 230px;}
 span.contact-navigation, span.yes_to_AQ {background-image: url('../assets/underline_wide.png') }
 span.contact-navigation:hover, span.yes_to_AQ {background-position: -200px 0px;}
 span.would_you {
@@ -337,18 +340,19 @@ div#gallery div.gallery-images {
 	width: 1600px;}
 div#gallery img { max-height: 390px; }
 div#gallery-details { 
-	height: 105px;
-	position: relative;}
+	height: 112px;
+	position: relative;
+	margin-left: 65px;}
 div#gallery-details div.gallery-details, div#gallery-details div.gallery-details-show {
 	display: block;
 	position: absolute;
 	top: 7px;}
 div#gallery-details div.gallery-details-show { left: 232px; } 
 div#gallery-details div.gallery-details { left: 162px; }
-div#gallery-details div.gallery-details div {
-	width: 150px;
-	float: left;
-	margin-left: 70px; }
+div.gallery-details p {
+	display: block;
+	width: 600px;
+	text-align: justify; }
 
 ul {
 	position: absolute;
@@ -384,6 +388,32 @@ li.first:after {
 	margin-left: 170px;
 	margin-top: -30px;
 	display:inline-block; }
+
+input[type="button"].gallery_control{
+	position: absolute;
+	width: 60px;
+	height: 40px; 
+	z-index: 999;
+	top: 180px;
+	background-image: url('../assets/gallery_go.png');
+	cursor: pointer;
+	border: none; 
+	margin: 0px;
+    padding: 0px;
+    background-color: transparent;
+	-webkit-transition: all .2s ease-out; 
+	-moz-transition: all .2s ease-out;
+	-o-transition: all .2s ease-out;
+	transition: all .2s ease-out; }
+input[type="button"].slide-left {
+	background-position: 10px 0;
+	}
+input[type="button"].slide-left:hover { background-position: -5px 0;}
+input[type="button"].slide-right {
+	background-position: 45px 0;
+	}
+input[type="button"].slide-right:hover { background-position: 60px 0;}
+
 
 /* sub-pages, testimony */
 
@@ -478,7 +508,7 @@ div#about_wrapper div#about_left div#group-thumb span {
 	display: block;
 }
 div#about_wrapper div#about_left div#group-thumb img {
-	z-index: 998 
+	z-index: 998; 
 	-webkit-transition: all .3s ease-out; 
 	-moz-transition: all .3s ease-out;
 	-o-transition: all .3s ease-out;
@@ -524,6 +554,11 @@ div#about_wrapper div#about_left div.about_photo div.name-tag {
 	-o-transition: all .3s ease-out;
 	transition: all .3s ease-out; }
 div#about_wrapper div#about_left div.about_photo div.name-tag:hover { background-position: 220px; }
+div#sassy_sparrow_caption {
+	position: absolute;
+	top: 486px;
+	right: 2px;
+}
 
 
 

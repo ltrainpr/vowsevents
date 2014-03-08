@@ -68,12 +68,14 @@
 		<div id="gallery-navigation">
 			<ul>
 				<li class="first">Jen &amp; Rob</li>
-				<li>Lionel &amp; Karin</li>
-				<a href="gallery.html"><li>Sample Wedding</li></a>
+				<a href="gallery3.html"><li>Lionel &amp; Karin</li></a>
+				<a href="gallery.html"><li>Rhonda &amp; Maynard</li></a>
 			</ul>
 			<h1 class="dg">Gallery</h1>
 		</div>
 		<div id="gallery">
+			<input type="button" id="slide-left" class="slide-left gallery_control">
+			<input type="button" id="slide-right" class="slide-right gallery_control">
 			<div class="gallery-images">
 				<div id="measure">		
 				<img src="../assets/photos/jr-3.jpg" id="left">
@@ -86,29 +88,47 @@
 		<div id="gallery-details">
 			<div class="gallery-details-show" id="gds">
 				<p>
-					<span onclick="showGD()" class="thin blue"  style="cursor:pointer">Show Wedding Details</span>
+					<span onclick="showGD()" class="thin blue"  style="cursor:pointer; margin-left: -70px;">Show Wedding Details</span>
 				</p>
 			</div>
 
-			<div class="hide gallery-details" id="gd">	
-				<div>
-					<p class="thin">
-						Photography <br/>
-						<a href="http://jesselaplante.com/#!/" class="no_bar blue"> Sample Photographer </a>
-					</p>
-				</div>
-				<div>
-					<p class="thin">
-						Catering <br/>
-						<a href="#" class="no_bar blue"> Sample Caterer</a>
-					</p>
-				</div>
-				<div>
-					<p class="thin">
-						Venue <br/>
-						<a href="#" class="no_bar blue"> Sample Venue </a>
-					</p>
-				</div>
+
+
+
+			<div class="hide gallery-details"  id="gd">
+				<p class="thin">	
+				 Photographer: 
+				 <a href=-"http://www.kenmillerphotography.com" target="_blank" class="blue no_bar">
+				 	Ken Miller</a>
+				,
+				Wedding Venue:
+				<a href=-"http://jeffco.us/parks/boettcher-mansion-weddings/" target="_blank" class="blue no_bar">
+					Boettcher Mansion</a>
+				,
+				Reception Venue:
+				<a href=-"http://www.brownpalace.com" target="_blank" class="blue no_bar">
+					Brown Palace</a>
+				,
+				Florist:
+				<a href=-"http://www.brownpalaceflowers.com" target="_blank" class="blue no_bar">
+					The Brown Palace Flower Shop</a>
+				,
+				Videographer:
+				<a href=-"mailto:hpvp@tds.net" target="_blank" class="blue no_bar">
+					High Plains Video Productions</a>
+				,
+				Photobooth:
+				<a href=-"http://doubleexposurephotobooth.com" target="_blank" class="blue no_bar">
+					Double Exposure</a>
+				,
+				Limo:
+				<a href=-"http://www.sunsetlimo.com" target="_blank" class="blue no_bar">
+					Sunset Limo</a>
+				,
+				DJ:
+				<a href=-"http://djwestdenver.com" target="_blank" class="blue no_bar">
+					DJ West</a>
+				</p>
 			</div>
 		</div>
 	</div>
@@ -155,7 +175,13 @@
 	// by subtracting half of it from half of the center image and all of the left image
 	var x = (y / 2) + z - 500;
 	// set the left margin of the image container div as that surplus
-	document.getElementById("measure").style.marginLeft= -x; }
+	document.getElementById("measure").style.marginLeft= -x; 
+	// set the left position of the left slider equal to 1000px minus the center image
+	// width divided by two
+	var l = (1000 - y) / 2 - 57;
+	var r = l - 8;
+	document.getElementById("slide-left").style.left= l
+	document.getElementById("slide-right").style.right= r }
 
 
 
