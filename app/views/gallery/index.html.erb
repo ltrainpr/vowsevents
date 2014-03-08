@@ -3,27 +3,20 @@
 	    var photo1 = document.getElementById("photo1").offsetWidth;
 	    var photo2 = document.getElementById("photo2").offsetWidth;
 	    var photo3 = document.getElementById("photo3").offsetWidth;
-	    if (document.getElementById("photo4")){
-		    var photo4 = document.getElementById("photo4").offsetWidth;
-	    }
-	    if (document.getElementById("photo5")){
-	    	var photo5 = document.getElementById("photo5").offsetWidth;
-	    }
-	    if (document.getElementById("photo6")){
-	    	var photo6 = document.getElementById("photo6").offsetWidth;
-	    }
-	    if (document.getElementById("photo7")){
-	    	var photo7 = document.getElementById("photo7").offsetWidth;
-	    }
-	    if (document.getElementById("photo8")){
-	    	var photo8 = document.getElementById("photo8").offsetWidth;
-	    }
+	    
 	    // find what lies beyond the halfway point of the 1000px container div
 	    // by subtracting half of it from half of the center image and all of the left image
 	    var hiddenPieceOfLeftPicture = (photo2 / 2) + photo1 - 500;
 	    var showing = 1000 - photo2 - (photo1-hiddenPieceOfLeftPicture) - photo3;
 	    // set the left margin of the image container div as that surplus
 	    document.getElementById("measure").style.left = "-"+hiddenPieceOfLeftPicture+"px";
+	    console.log(document.getElementById("measure").style.left)
+	    var l = (1000 - photo2) / 2 - 57;
+			var r = l - 8;
+			console.log(l, r)
+			document.getElementById("slide-left").style.left=l +'px';
+			document.getElementById("slide-right").style.right=r + 'px';
+
 	    var leftPosition = 0;
 
 	    var counter = 2;
@@ -47,6 +40,11 @@
 	        $('#measure').animate({
 		    		left: '-'+ leftPosition + 'px'
 	        }, 500);
+	        var l = (1000 - centerImage) / 2 - 57;
+					var r = l - 8;
+					console.log(l, r)
+					document.getElementById("slide-left").style.left=l +'px';
+					document.getElementById("slide-right").style.right=r + 'px';
 	    	}
     	});
 
@@ -58,12 +56,17 @@
 	    		var centerImage = document.getElementById("photo"+(counter)).offsetWidth;
 
 	    		var leftImage = document.getElementById("photo"+(counter-1)).offsetWidth;
-	    			console.log(leftPosition)
+
 		    		leftPosition =  leftImage - (500 - (centerImage/2));
-	    			console.log(leftPosition+'px')
+
 	        $('#measure').animate({
 		    		left: '-'+leftPosition+'px'
 	        }, 500);
+	        var l = (1000 - centerImage) / 2 - 57;
+					var r = l - 8;
+					console.log(l, r)
+					document.getElementById("slide-left").style.left=l +'px';
+					document.getElementById("slide-right").style.right=r + 'px';
 	    	}
 	    });
 		});
@@ -82,8 +85,8 @@
 				<h1>Gallery</h1>
 			</div>
 			<div id="gallery">
-					<input type="button" class="slide-left gallery_control">
-					<input type="button" class="slide-right gallery_control">
+					<input type="button" id="slide-left" class="slide-left gallery_control">
+					<input type="button" id="slide-right" class="slide-right gallery_control">
 				<div class="gallery-images">
 					<div id="measure">
 						<span id='photo_count'><%= @photo_count %></span>
