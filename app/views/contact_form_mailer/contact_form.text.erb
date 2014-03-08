@@ -1,1 +1,14 @@
-Testing, Testing
+Contact Form has been Submitted
+===============================
+
+Name:	<%= @form_info[:name] %>
+Email:	<%= @form_info[:email] %>
+<% if !@form_info[:other_message].empty? %>
+	Other:	<%= @form_info[:other_message] %>
+<% else %>
+	Planning a:	<%= @form_info[:event_type] %>
+	Date Range:	<%= @form_info['date-range'] %>
+	Budget:	<%= @form_info[:budget] %>
+	Venue:	<%= @form_info[:venue] %>
+	Questionnaire?	<%= @form_info[:questionnaire] %>
+<% end %>
