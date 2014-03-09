@@ -228,6 +228,7 @@ div#footer p {
 
 /* sub-pages, services */
 div#services_background { background-image: url('services-bg.jpg'); }
+div#other_services_background { background-image: url('services-bg.jpg'); }
 div.photo_background {
 	width: 100%;
 	background-position: center center fixed;
