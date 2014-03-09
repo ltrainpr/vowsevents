@@ -49,7 +49,7 @@ a, span.contact-navigation, span.yes_to_AQ, li {
 	-o-transition: all .3s ease;
 	transition: all .3s ease; }
 a, .contact-navigation { background-position: 0px 0px; }
-a { background-image: url('../assets/underline.png');}
+a { background-image: url('underline.png');}
 a, li {
 	width: 190px;
 	text-align: left;
@@ -161,7 +161,7 @@ div#header .swoosh {
 
 div#call_out {
 	height: 329px;
-	background-image: url('../assets/home-flowers.jpg');
+	background-image: url('home-flowers.jpg');
 	background-repeat: no-repeat;
 	border-bottom: 4px solid #c6d8ea;}
 div#call_out .call_out-text { 
@@ -175,7 +175,7 @@ div#call_out .call_out-text {
 /* structure, sundry */
 
 div#sundry, div#services, div#gallery-details, div#contact-form  { 
-	background-image: url('../assets/festoonery.png');
+	background-image: url('festoonery.png');
 	background-repeat: no-repeat;
 	background-color: white;
 	background-position: left bottom;}
@@ -193,7 +193,7 @@ div#sundry .sundry-social_media {
 	margin: 0 15px; }
 div#sundry .sundry-social_media div span { 
 	display: inline-block;
-	background-image: url('../assets/smicons.png');
+	background-image: url('smicons.png');
 	background-repeat: no-repeat;
 	width: 45px; 
 	height: 48px; }
@@ -227,7 +227,7 @@ div#footer p {
 /* SUB-PAGES */
 
 /* sub-pages, services */
-div#services_background { background-image: url('../assets/services-bg.jpg'); }
+div#services_background { background-image: url('services-bg.jpg'); }
 div.photo_background {
 	width: 100%;
 	background-position: center center fixed;
@@ -257,7 +257,7 @@ div#services-navigation p {
 div#services-navigation .pad-right { padding-right: 15px; }
 div#services-navigation .services-navigation-item {
 	display: block;
-	background-image: url('../assets/services.png');
+	background-image: url('services.png');
 	width: 305px;
 	height: 69px;
 	font-size: 20px;
@@ -277,7 +277,7 @@ div#services-navigation .oe { background-position-x: 310px;}
 div#services-navigation .services-navigation-item:hover { background-position-y: -94px; }
 
 /* sub-pages, contact */
-div#contact_background { background-image: url('../assets/photos/photo_background_contact.jpg');}
+div#contact_background { background-image: url('photo_background_contact.jpg');}
 div#contact-form { 
 	height: 440px;
 	padding-top: 75px;
@@ -303,14 +303,14 @@ input, textarea {
 input:focus{ border-bottom: 1px #4271a5 solid; }
 textarea { border-bottom: none; }
 textarea.multi_line, textarea.message_multi_line { 
-	background-image: url('../assets/underline_background.png');
+	background-image: url('underline_background.png');
 	background-repeat: repeat-y;
 	height: 153px;
 	line-height: 2.25em;
 	margin-top: -6px;
 	resize: none; }
 textarea.message_multi_line {height: 230px;}
-span.contact-navigation, span.yes_to_AQ {background-image: url('../assets/underline_wide.png') }
+span.contact-navigation, span.yes_to_AQ {background-image: url('underline_wide.png') }
 span.contact-navigation:hover, span.yes_to_AQ {background-position: -200px 0px;}
 span.would_you {
 	display: block;
@@ -318,7 +318,7 @@ span.would_you {
 }
 
 /* sub-pages, gallery */
-div#gallery_background { background-image: url('../assets/photos/photo_background_gallery.jpg');
+div#gallery_background { background-image: url('photo_background_gallery.jpg');
 }
 div#gallery-navigation, div#gallery, div#gallery-details { background-color: #fff; }
 div#gallery-navigation { 
@@ -369,7 +369,7 @@ ul {
 	transition: all .4s ease-out; }
 ul:hover { height: 130px; }
 li {
-	background-image: url('../assets/li_hover.png');
+	background-image: url('li_hover.png');
 	color: #545454;
 	background-color: white;
 	padding: 5px 21px; }
@@ -384,7 +384,7 @@ li.first:hover {
 	color: #545454;
 	font-weight: 500;}
 li.first:after {
-	content:  url('../assets/down_caret.png') ;
+	content:  url('down_caret.png') ;
 	margin-left: 170px;
 	margin-top: -30px;
 	display:inline-block; }
@@ -395,7 +395,7 @@ input[type="button"].gallery_control{
 	height: 40px; 
 	z-index: 999;
 	top: 180px;
-	background-image: url('../assets/gallery_go.png');
+	background-image: url('gallery_go.png');
 	cursor: pointer;
 	border: none; 
 	margin: 0px;
@@ -454,7 +454,7 @@ div#testimony-sm span {
 	display: block;
 	width: 48px;
 	height: 48px;
-	background-image: url('../assets/smicons_sm.png');
+	background-image: url('smicons_sm.png');
 	margin-right: 10px;
 }
 .pint { background-position: -20px -6px;}
@@ -485,7 +485,7 @@ div#full_black_background div#pdf_display {
 
 
 /* sub-pages, about */
-div#about_background { background-image: url('../assets/photos/photo_background_about.jpg'); }
+div#about_background { background-image: url('photo_background_about.jpg'); }
 div#about_wrapper {
 	width: 600px;
 	padding-top: 79px;
@@ -532,7 +532,7 @@ div#about_wrapper div#about_left div.about_photo {
 	height: 122px;
 	width: 100%;
 	margin-bottom: 16px;
-	background-image: url('../assets/photos/about_photos.png'); }
+	background-image: url('about_photos.png'); }
 div#about_wrapper div#about_left div.about_photo p { 
 	font-size: 10pt;
 	display: inline-block;
@@ -548,7 +548,7 @@ div#about_wrapper div#about_left div.simona { background-position: 0px 123px; }
 div#about_wrapper div#about_left div.about_photo div.name-tag {
 	width: 108px;
 	height: 36px;
-	background-image: url('../assets/about-us_tag.png');
+	background-image: url('about-us_tag.png');
 	background-position: 113px;
 	position: absolute;
 	bottom: 2px;
