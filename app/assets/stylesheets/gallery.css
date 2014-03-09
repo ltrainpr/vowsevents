@@ -1,11 +1,12 @@
 #measure {
 	position: relative;
+	overflow: hidden;
+	height: 390px;
 }
 
 .photos {
 	position: absolute;
 	z-index: 0;
-	overflow: hidden;
 }
 
 .active {
