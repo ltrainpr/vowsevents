@@ -10,20 +10,13 @@
 	    var showing = 1000 - photo2 - (photo1-hiddenPieceOfLeftPicture) - photo3;
 	    // set the left margin of the image container div as that surplus
 	    document.getElementById("measure").style.left = "-"+hiddenPieceOfLeftPicture+"px";
-	    console.log(document.getElementById("measure").style.left)
-	    var l = (1000 - photo2) / 2 - 57;
-			var r = l - 8;
-			console.log(l, r)
-			document.getElementById("slide-left").style.left=l +'px';
-			document.getElementById("slide-right").style.right=r + 'px';
-
+	    
 	    var leftPosition = 0;
 
 	    var counter = 2;
   		var totalPhotos = parseInt($('#photo_count').text(), 10);
 
-	    $('.slide-left').on('click', function(){
-	    	console.log(counter)
+	    $('.slide-right').on('click', function(){
 	      if ((counter > 1)&&(counter <= totalPhotos)) {
 		    	if (counter < totalPhotos) {
 		    		$('#measure .active').last().removeClass('active')
@@ -40,15 +33,10 @@
 	        $('#measure').animate({
 		    		left: '-'+ leftPosition + 'px'
 	        }, 500);
-	        var l = (1000 - centerImage) / 2 - 57;
-					var r = l - 8;
-					console.log(l, r)
-					document.getElementById("slide-left").style.left=l +'px';
-					document.getElementById("slide-right").style.right=r + 'px';
 	    	}
     	});
 
-	    $('.slide-right').on('click', function(){
+	    $('.slide-left').on('click', function(){
 	    	if ((counter >= 1)&&(counter < totalPhotos)) {
 		    	$('#measure .active').first().removeClass('active')
 		    	$('#measure .active').last().next().addClass('active')
@@ -62,11 +50,6 @@
 	        $('#measure').animate({
 		    		left: '-'+leftPosition+'px'
 	        }, 500);
-	        var l = (1000 - centerImage) / 2 - 57;
-					var r = l - 8;
-					console.log(l, r)
-					document.getElementById("slide-left").style.left=l +'px';
-					document.getElementById("slide-right").style.right=r + 'px';
 	    	}
 	    });
 		});
@@ -85,8 +68,7 @@
 				<h1>Gallery</h1>
 			</div>
 			<div id="gallery">
-					<input type="button" id="slide-left" class="slide-left gallery_control">
-					<input type="button" id="slide-right" class="slide-right gallery_control">
+				<input type="button" id="slide-right" class="slide-left gallery_control">
 				<div class="gallery-images">
 					<div id="measure">
 						<span id='photo_count'><%= @photo_count %></span>
@@ -112,6 +94,7 @@
 						<% end %>
 					</div>
 				</div>
+				<input type="button" id="slide-left" class="slide-right gallery_control">
 			</div>
 
 			<div id="gallery-details">
