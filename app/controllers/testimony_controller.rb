@@ -4,6 +4,8 @@ class TestimonyController < ApplicationController
   end
 
   def show
-  	@testimonial = Testimonial.where(event_id: params[:event_id]).first
+    p '*' * 150
+    p params
+  	@testimonial = Testimonial.find(params[:id])
   end
 end
