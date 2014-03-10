@@ -1,8 +1,4 @@
-<head>
-	<title>Home</title>
-</head>
 
-<body>
 	<div id="wrapper">
 		<%= render "partials/navigation" %>
 		<div id="call_out">	
@@ -31,7 +27,11 @@
 					<div class="right">
 						<p><%= @event.name %> <br/>
 							<%= link_to "view gallery", gallery_index_path(event_id: @event.id), :onClick => "history.go(0)", class: "thin"%>
-							<%= link_to "read testimonial", testimony_path(id: @event.testimonials.first.id), class: "thin"%>
+							<% if @latest_testimonial %>
+								<%= link_to "read testimonial", testimony_path(id: @latest_testimonial), class: "thin"%>
+							<% else %>
+								<%= link_to "read testimonial", testimony_index_path, class: "thin"%>
+							<% end %>
 						</p>
 					</div>
 				</div>
@@ -46,19 +46,16 @@
 				</div>
 				<div class="sundry-from_blog">
 					<h1 class="heading">From Our Blog</h1>
-					<p class="thin">We are proud to announce that Vows Events
-					has a new blog!
-
-					<a class="no_bar blue" href="http://vowsevents.tumblr.com" style="margin-left: 15px">Read On</a>
-					<span class="thin blue" style="float: right; margin-top: 30px; ">Jan 14, 2013</span></p>
+					<p class="thin">We are proud to announce that Vows Events has a new blog!
+						<a class="no_bar blue" href="http://vowsevents.tumblr.com" style="margin-left: 15px">Read On</a>
+						<span class="thin blue" style="float: right; margin-top: 30px; ">Jan 14, 2013</span>
+					</p>
 				</div>
 			</div>
 		</div>
-		
 	</div>
 	<div id="footer">
-			<p class="thin blue">&copy; Vows Events, 2013</p>
-		</div>
+		<p class="thin blue">&copy; Vows Events, 2013</p>
+	</div>
 	
-</body>
 
