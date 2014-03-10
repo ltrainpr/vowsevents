@@ -406,18 +406,18 @@ input[type="button"].gallery_control{
 	-moz-transition: all .2s ease-out;
 	-o-transition: all .2s ease-out;
 	transition: all .2s ease-out; }
-input[type="button"].slide-left {
+	#slide-left {
 	background-position: 10px 0;
 	position: relative;
 	float: right;
 	}
-input[type="button"].slide-left:hover { background-position: -5px 0;}
-input[type="button"].slide-right {
+	#slide-left:hover { background-position: -5px 0;}
+	#slide-right {
 	background-position: 45px 0;
 	position: relative;
 	float: left;
 	}
-input[type="button"].slide-right:hover { background-position: 60px 0;}
+	#slide-right:hover { background-position: 60px 0;}
 
 
 /* sub-pages, testimony */
