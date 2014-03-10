@@ -1,0 +1,55 @@
+<div class="photo_background" id="other_services_background">
+	<div id="wrapper">
+		<%= render "partials/navigation" %>
+		<div id="services">
+			<div id="services-description">
+				<div id="services-description-default">
+					<h2 class="thin" style="color: #545454"><span class="dropletter">T</span>he heart of our company is orchestration. We are organized and well versed 
+					regarding all types of events, and would like to share that experience with you.
+					<br/><br/>
+					As there is a scale for both budget and need of our services, we&#39;ve separated our 
+					skills into several packages to be used as guidelines. All experiences can be 
+					customized to meet your needs. </h2>
+				</div>
+
+				<div id="services-description-ss" class="hide">
+					<h2 class="thin" style="color: #545454"><span class="dropletter">Y</span>ou don't have time 
+					to plan your event, but you don't want your guests to know! We'll assist in all phases
+					of the planning process and assist in the pre-event, but will leave before your guests arrive
+					so you can take full credit for your party!  </h2>
+				</div>
+
+				<div id="services-description-bt" class="hide">
+					<h2 class="thin" style="color: #545454"><span class="dropletter">W</span>e will provide
+					the same level of service as Applause, but we'll stay through the end of the event, ensuring
+					your every request is taken care of as well as the clean up!  </h2>
+				</div>
+
+				<%= image_tag 'curly.png' %>
+			</div>
+
+			<div id="services-navigation">
+				<p class="thin">
+					<span class="direction"> hover over for specifics </span>
+					<br/>
+					
+					<span class="services-navigation-item blue oe" onmouseover="showSS()" onmouseout="hideSS()"><span class="pad-right">Applause</span></span><br/>
+						<span class="pad-right">starts at $400</span><br/>
+
+					<span class="services-navigation-item blue oe" onmouseover="showBT()" onmouseout="hideBT()"><span class="pad-right">Standing Ovation</span></span><br/>
+						<span class="pad-right">starts at $600</span><br/>
+
+					<br/>
+					For Corporate Events, please <%= link_to "contact us", contact_index_path, class: "blue no_bar" %> for a custom quote.
+					<br/><br/>
+
+					<%= link_to "Weddings", services_path, style: "float: right; margin-top: 20px" %>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>	
+<div id="footer">
+		<p class="thin blue">&copy; Vows Events, 2013</p>
+</div>
+

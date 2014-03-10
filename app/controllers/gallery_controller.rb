@@ -13,5 +13,6 @@ class GalleryController < ApplicationController
 		@photo7 = photos[6]
 		@photo8 = photos[7]
 		@photo_count = photos.count
+		@vendors = event.vendors
 	end
 end

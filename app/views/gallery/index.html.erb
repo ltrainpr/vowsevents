@@ -1,4 +1,4 @@
-	<script type="text/javascript">
+	<script type="text/javascript" data-turbolinks-eval=false>
 		$(window).load(function centerImages() {
 	    var photo1 = document.getElementById("photo1").offsetWidth;
 	    var photo2 = document.getElementById("photo2").offsetWidth;
@@ -9,21 +9,13 @@
 	    var hiddenPieceOfLeftPicture = (photo2 / 2) + photo1 - 500;
 	    var showing = 1000 - photo2 - (photo1-hiddenPieceOfLeftPicture) - photo3;
 	    // set the left margin of the image container div as that surplus
-	    // document.getElementById("measure").style.left = "-"+hiddenPieceOfLeftPicture+"px";
-	    console.log(document.getElementById("measure").style.left)
-	    var l = (1000 - photo2) / 2 - 57;
-			var r = l - 8;
-			console.log(l, r)
-			document.getElementById("slide-left").style.left=l +'px';
-			document.getElementById("slide-right").style.right=r + 'px';
-
+	    document.getElementById("measure").style.left = "-"+hiddenPieceOfLeftPicture+"px";
 	    var leftPosition = 0;
 
 	    var counter = 2;
   		var totalPhotos = parseInt($('#photo_count').text(), 10);
 
-	    $('.slide-left').on('click', function(){
-	    	console.log(counter)
+	    $('.slide-right').on('click', function(){
 	      if ((counter > 1)&&(counter <= totalPhotos)) {
 		    	if (counter < totalPhotos) {
 		    		$('#measure .active').last().removeClass('active')
@@ -40,15 +32,10 @@
 	        $('#measure').animate({
 		    		left: '-'+ leftPosition + 'px'
 	        }, 500);
-	        var l = (1000 - centerImage) / 2 - 57;
-					var r = l - 8;
-					console.log(l, r)
-					document.getElementById("slide-left").style.left=l +'px';
-					document.getElementById("slide-right").style.right=r + 'px';
 	    	}
     	});
 
-	    $('.slide-right').on('click', function(){
+	    $('.slide-left').on('click', function(){
 	    	if ((counter >= 1)&&(counter < totalPhotos)) {
 		    	$('#measure .active').first().removeClass('active')
 		    	$('#measure .active').last().next().addClass('active')
@@ -62,16 +49,11 @@
 	        $('#measure').animate({
 		    		left: '-'+leftPosition+'px'
 	        }, 500);
-	        var l = (1000 - centerImage) / 2 - 57;
-					var r = l - 8;
-					console.log(l, r)
-					document.getElementById("slide-left").style.left=l +'px';
-					document.getElementById("slide-right").style.right=r + 'px';
 	    	}
 	    });
 		});
 	</script>
-
+	<div class="photo_background" id="gallery_background">
 		<div id="wrapper">
 			<%= render "partials/navigation" %>
 
@@ -84,8 +66,7 @@
 				<h1>Gallery</h1>
 			</div>
 			<div id="gallery">
-					<input type="button" id="slide-left" class="slide-left gallery_control" style="left: 200px;">
-					<input type="button" id="slide-right" class="slide-right gallery_control" style="left: 400px;">
+				<input type="button" id="slide-left" class="slide-left gallery_control">
 				<div class="gallery-images">
 					<div id="measure">
 
@@ -113,32 +94,23 @@
 
 					</div>
 				</div>
+				<input type="button" id="slide-right" class="slide-right gallery_control">
 			</div>
 
 			<div id="gallery-details">
 				<div class="gallery-details-show" id="gds">
-					<p>
-						<a href="#" onclick="showGD()" class="thin">Show Wedding Details</a>
+					<p class="thin">
+						<span onclick="showGD()" class="thin blue"  style="cursor:pointer; margin-left: -70px;">Show Wedding Details</span>
 					</p>
 				</div>
 
 				<div class="hide gallery-details" id="gd">	
 					<div>
 						<p class="thin">
-							Photography <br/>
-							<a href="#" class="no_bar blue"> Sample Photographer </a>
-						</p>
-					</div>
-					<div>
-						<p class="thin">
-							Catering <br/>
-							<a href="#" class="no_bar blue"> Sample Caterer</a>
-						</p>
-					</div>
-					<div>
-						<p class="thin">
-							Venue <br/>
-							<a href="#" class="no_bar blue"> Sample Venue </a>
+							<% @vendors.each do |vendor| %>
+									<%= vendor.vendor_type %>:
+									<%= link_to vendor.name, vendor.url, class: "no_bar blue", target: "_blank" %>
+							<% end %>
 						</p>
 					</div>
 				</div>
@@ -147,8 +119,8 @@
 		<div id="footer">
 			<p class="thin blue">&copy; Vows Events, 2013</p>
 		</div>
-
-	<script type="text/javascript">
+	</div>
+	<script type="text/javascript" data-turbolinks-eval=false>
 
 		// SHOW GALLERY DETAILS (or WEDDING DETAILS)
 		// NOTE: AT THE MOMENT, THIS RESETS TO THE TOP OF THE PAGE. 

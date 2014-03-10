@@ -1,9 +1,11 @@
 
 	<div id="full_black_background">
 		<div id="back_to_testimony">
-			<a href="testimony.html" class="no_bar"><h2> Back to Testimony <h2></a>
+			<%= link_to testimony_index_path, class: "no_bar" do %>
+				<h2> Back to Testimony <h2>
+			<% end %>
 		</div>
 		<div id="pdf_display">
-			<iframe src=<%= Image.find(@testimonial.image_id).s3_image_url.url(:large) %> style="width: 1000px; height:600px;" frameborder="0"></iframe>
+			<iframe src=<%= @testimonial.images.first.s3_image_url.url(:large) %> style="width: 1000px; height:600px;" frameborder="0"></iframe>
 		</div>
 	</div>

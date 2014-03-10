@@ -1,5 +1,5 @@
 
-	<div id ="photo_background">
+	<div  class="photo_background" id="services_background">
 		<div id="wrapper">
 			<%= render "partials/navigation" %>
 			<div id="services">
@@ -25,19 +25,16 @@
 
 
 					<div id="services-description-wg" class="hide">
-						<h2 class="thin" style="color: #545454"><span class="dropletter">N</span>eed help executing
-							and managing all the details? We'll help you design the wedding of your dreams and
-							find the perfect location for both the ceremony and reception. We'll connect with
-							the best vendors and handle all the logistics.  </h2>
+						<h2 class="thin" style="color: #545454"><span class="dropletter">N</span>eed help executingand managing all the details? We'll help you design the wedding of your dreams andfind the perfect location for both the ceremony and reception. We'll connect with the best vendors and handle all the logistics.  
+						</h2>
 					</div>
 
 					
 					<div id="services-description-di" class="hide">
-						<h2 class="thin" style="color: #545454"><span class="dropletter">F</span>rom start to finish, we&#39;ll select the perfect locations, guide you through vendor selection, and manage every detail right
-							down to your wedding celebration brunch, so you can relax and enjoy the wedding of your dreams with your family and friends.</h2>
+						<h2 class="thin" style="color: #545454"><span class="dropletter">F</span>rom start to finish, we&#39;ll select the perfect locations, guide you through vendor selection, and manage every detail right down to your wedding celebration brunch, so you can relax and enjoy the wedding of your dreams with your family and friends.</h2>
 					</div>
 
-					<img src="../assets/curly.png">
+					<%= image_tag "curly.png" %>
 				</div><!-- services-description -->
 				<div id="services-navigation">
 					<p class="thin">
@@ -56,7 +53,7 @@
 						<span class="services-navigation-item blue di" onmouseover="showDI()" onmouseout="hideDI()"><span class="pad-right">Diamond</span></span><br/>
 							<span class="pad-right">starts at $5000</span><br/>
 
-						<a href="services-other.html" style="float: right; margin-top: 20px"> Other Events </a>
+						<%= link_to "Other Events", other_services_path, style: "float: right; margin-top: 20px" %>
 					</p>
 				</div><!-- services-navigation -->
 			</div><!-- services -->
@@ -65,35 +62,3 @@
 	<div id="footer">
 			<p class="thin blue">&copy; Vows Events, 2013</p>
 	</div>
-
-
-<script>
-	function showSS() {
-		document.getElementById("services-description-default").className = "hide";
-		document.getElementById("services-description-ss").className = "show";
-		document.getElementById("services-description-ss").className += " pad-top"; }
-	function showWG() {
-		document.getElementById("services-description-default").className = "hide";
-		document.getElementById("services-description-wg").className = "show";
-		document.getElementById("services-description-wg").className += " pad-top"; }
-	function showBT() {
-		document.getElementById("services-description-default").className = "hide";
-		document.getElementById("services-description-bt").className = "show";
-		document.getElementById("services-description-bt").className += " pad-top"; }
-	function showDI() {
-		document.getElementById("services-description-default").className = "hide";
-		document.getElementById("services-description-di").className = "show";
-		document.getElementById("services-description-di").className += " pad-top"; }
-	function hideSS() {
-		document.getElementById("services-description-ss").className = "hide";
-		document.getElementById("services-description-default").className = "show"; }
-	function hideWG() {
-		document.getElementById("services-description-wg").className = "hide";
-		document.getElementById("services-description-default").className = "show"	}
-	function hideBT() {
-		document.getElementById("services-description-bt").className = "hide";
-		document.getElementById("services-description-default").className = "show";}
-	function hideDI() {
-		document.getElementById("services-description-di").className = "hide";
-		document.getElementById("services-description-default").className = "show"	}
-</script>
