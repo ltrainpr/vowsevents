@@ -42,6 +42,6 @@ class UploadPhotoController < ApplicationController
   private
 
   def upload_photo_params
-    params.require(:image).permit(:s3_image_url, :event_id)
+    params.require(:image).permit(:s3_image_url, :event_id, :testimonial_id)
   end
 end
