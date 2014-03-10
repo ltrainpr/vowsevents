@@ -6,6 +6,6 @@
 			<% end %>
 		</div>
 		<div id="pdf_display">
-			<iframe src=<%= Image.find(@testimonial.image_id).s3_image_url.url(:large) %> style="width: 1000px; height:600px;" frameborder="0"></iframe>
+			<iframe src=<%= @testimonial.images.first.s3_image_url.url(:large) %> style="width: 1000px; height:600px;" frameborder="0"></iframe>
 		</div>
 	</div>

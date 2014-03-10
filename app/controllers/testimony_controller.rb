@@ -4,8 +4,6 @@ class TestimonyController < ApplicationController
   end
 
   def show
-    p '*' * 150
-    p params
   	@testimonial = Testimonial.find(params[:id])
   end
 end
