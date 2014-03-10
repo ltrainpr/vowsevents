@@ -94,33 +94,23 @@
 						<% end %>
 					</div>
 				</div>
-				<input type="button" id="slide-left" class="slide-right gallery_control">
+				<input type="button" id="slide-right" class="slide-right gallery_control">
 			</div>
 
 			<div id="gallery-details">
 				<div class="gallery-details-show" id="gds">
-					<p>
-						<a href="#" onclick="showGD()" class="thin">Show Wedding Details</a>
+					<p class="thin">
+						<span onclick="showGD()" class="thin blue"  style="cursor:pointer; margin-left: -70px;">Show Wedding Details</span>
 					</p>
 				</div>
 
 				<div class="hide gallery-details" id="gd">	
 					<div>
 						<p class="thin">
-							Photography <br/>
-							<a href="#" class="no_bar blue"> Sample Photographer </a>
-						</p>
-					</div>
-					<div>
-						<p class="thin">
-							Catering <br/>
-							<a href="#" class="no_bar blue"> Sample Caterer</a>
-						</p>
-					</div>
-					<div>
-						<p class="thin">
-							Venue <br/>
-							<a href="#" class="no_bar blue"> Sample Venue </a>
+							<% @vendors.each do |vendor| %>
+									<%= vendor.vendor_type %>:
+									<%= link_to vendor.name, vendor.url, class: "no_bar blue", target: "_blank" %>
+							<% end %>
 						</p>
 					</div>
 				</div>
