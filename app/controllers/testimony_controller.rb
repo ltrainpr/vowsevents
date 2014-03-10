@@ -6,6 +6,7 @@ class TestimonyController < ApplicationController
   end
 
   def show
+  	p Testimonial.where(event_id: params[:event_id]).first
   	@testimonial = Testimonial.where(event_id: params[:event_id]).first
   	
   end
