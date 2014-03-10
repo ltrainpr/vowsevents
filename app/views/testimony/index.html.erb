@@ -1,32 +1,24 @@
 
 <div id="wrapper">
 	<%= render "partials/navigation" %>
-
 	<div id="testimony-wrapper">
 		<div id="testimony-header">
 			<h1 class="dg">Testimonials</h1>
 		</div>
-
 		<div id="testimony">
-			<div>
-				<p class="thin"><span class="blue big">Jen &amp; Rob</span>
-					<br/>
-					<%= @jen_rob.quote %>
-				<br/>
-				<br/>
-
-					<%= link_to "read testimonial", testimony_path(id: 1), class: "contact-navigation show-testimony" %>
-
-				</p>
-			</div>
-			<div>
-			<p class="thin"><span class="blue big">Rhonda &amp; Maynard</span>
-				<br/>
-					<%= @rhonda_maynard.quote %>
-				<br/>
-					<%= link_to "read testimonial", testimony_path(id: 2), class: "contact-navigation show-testimony" %>
-					<%= link_to "read testimonials", testimony_path(id: 3), class: "contact-navigation show-testimony" %>
-			</div>
+			<%= @testimonials.each do |testimonial| %>
+				<% @event = Event.find(testimonial.event_id) %>
+				<div>
+					<p class="thin">
+						<span class="blue big"><%= @event.name %></span>
+						<br/>
+						<%= testimonial.quote %>
+						<br/>
+						<br/>
+						<%= link_to "read testimonial", testimony_path(id: testimonial.id), class: "contact-navigation show-testimony" %>
+					</p>
+				</div>
+			<% end %>
 		</div>
 		<div id="testimony-sm">
 			<a href="http://www.pinterest.com/vowseventsdenvr/" target="_blank" class="no_bar">
