@@ -4,14 +4,12 @@
 	height: 390px;
 }
 
-.photos {
+.long-div {
 	position: absolute;
-	z-index: 0;
 }
 
-.active {
-	position: relative;
-	z-index: 1;
+.photos {
+	/*position: absolute;*/
 }
 
 #photo_count {

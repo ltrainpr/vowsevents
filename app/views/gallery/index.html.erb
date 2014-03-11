@@ -1,58 +1,30 @@
 	<script type="text/javascript" data-turbolinks-eval=false>
 		$(window).load(function centerImages() {
-	    var photo1 = document.getElementById("photo1").offsetWidth;
-	    var photo2 = document.getElementById("photo2").offsetWidth;
-	    var photo3 = document.getElementById("photo3").offsetWidth;
-
-	    // find what lies beyond the halfway point of the 1000px container div
-	    // by subtracting half of it from half of the center image and all of the left image
-	    var hiddenPieceOfLeftPicture = (photo2 / 2) + photo1 - 500;
-	    var showing = 1000 - photo2 - (photo1-hiddenPieceOfLeftPicture) - photo3;
-	    // set the left margin of the image container div as that surplus
-	    document.getElementById("measure").style.left = "-"+hiddenPieceOfLeftPicture+"px";
-	    var leftPosition = 0;
-
-	    var counter = 2;
-  		var totalPhotos = parseInt($('#photo_count').text(), 10);
+	    // get width of all pictures
+	    // get width of each picture
+	    // record left px for of each picture
+	    // insert in each of the elements
+	    // use that to move the scroll bar left and right
+	    
 
 	    $('.slide-right').on('click', function(){
-	      if ((counter > 1)&&(counter <= totalPhotos)) {
-		    	if (counter < totalPhotos) {
-		    		$('#measure .active').last().removeClass('active')
-		    	}
-		      $('#measure .active').first().prev().addClass('active')
-	    		counter -= 1;
-	    		var centerImage = document.getElementById("photo"+(counter)).offsetWidth;
-	    		if (counter > 1) {
-	    			var leftImage = document.getElementById("photo"+(counter-1)).offsetWidth;
-	    			leftPosition = leftImage - (500 - (centerImage/2));
-	    		}else{
-	    			leftPosition = 0;
-	    		}
+
 	        $('#measure').animate({
-		    		left: '-'+ leftPosition + 'px'
+
 	        }, 500);
 	    	}
     	});
 
 	    $('.slide-left').on('click', function(){
-	    	if ((counter >= 1)&&(counter < totalPhotos)) {
-		    	$('#measure .active').first().removeClass('active')
-		    	$('#measure .active').last().next().addClass('active')
-	    		counter += 1;
-	    		var centerImage = document.getElementById("photo"+(counter)).offsetWidth;
-
-	    		var leftImage = document.getElementById("photo"+(counter-1)).offsetWidth;
-
-		    		leftPosition =  leftImage - (500 - (centerImage/2));
 
 	        $('#measure').animate({
-		    		left: '-'+leftPosition+'px'
+
 	        }, 500);
 	    	}
 	    });
 		});
 	</script>
+
 	<div class="photo_background" id="gallery_background">
 		<div id="wrapper">
 			<%= render "partials/navigation" %>
@@ -69,29 +41,29 @@
 				<input type="button" id="slide-left" class="slide-left gallery_control">
 				<div class="gallery-images">
 					<div id="measure">
-
+						<div class="long-div">
 							<span id='photo_count'><%= @photo_count %></span>
 							<% if @photo1 && @photo2 && @photo3 %>
-								<%= image_tag @photo1.s3_image_url.url(:medium), id: "photo1", class: "active photos"  %>
-								<%= image_tag @photo2.s3_image_url.url(:medium), id: "photo2", class: "active photos" %>	
-								<%= image_tag @photo3.s3_image_url.url(:medium), id: "photo3", class: "active photos" %>
+								<%= image_tag @photo1.s3_image_url.url(:medium), id: "photo1", class: "photos"  %>
+								<%= image_tag @photo2.s3_image_url.url(:medium), id: "photo2", class: "photos" %>	
+								<%= image_tag @photo3.s3_image_url.url(:medium), id: "photo3", class: "photos" %>
 								<% if @photo4 %>
-								<%= image_tag @photo4.s3_image_url.url(:medium), id: "photo4", class: "photos" %>
+									<%= image_tag @photo4.s3_image_url.url(:medium), id: "photo4", class: "photos" %>
 								<% end %>
 								<% if @photo5 %>
-								<%= image_tag @photo5.s3_image_url.url(:medium), id: "photo5", class: "photos" %>
+									<%= image_tag @photo5.s3_image_url.url(:medium), id: "photo5", class: "photos" %>
 								<% end %>
 								<% if @photo6 %>
-								<%= image_tag @photo6.s3_image_url.url(:medium), id: "photo6", class: "photos" %>
+									<%= image_tag @photo6.s3_image_url.url(:medium), id: "photo6", class: "photos" %>
 								<% end %>
 								<% if @photo7 %>
-								<%= image_tag @photo7.s3_image_url.url(:medium), id: "photo7", class: "photos" %>
+									<%= image_tag @photo7.s3_image_url.url(:medium), id: "photo7", class: "photos" %>
 								<% end %>
 								<% if @photo8 %>
-								<%= image_tag @photo8.s3_image_url.url(:medium), id: "photo8", class: "photos" %>
+									<%= image_tag @photo8.s3_image_url.url(:medium), id: "photo8", class: "photos" %>
 								<% end %>
 							<% end %>
-
+						</div>
 					</div>
 				</div>
 				<input type="button" id="slide-right" class="slide-right gallery_control">
