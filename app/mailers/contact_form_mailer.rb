@@ -3,7 +3,7 @@ class ContactFormMailer < ActionMailer::Base
 
   def contact_form(form_info)
   	@form_info = form_info
-  	email1 = "ltrainpr@gmail.com"
+  	email1 = "avery@vowsevents.com"
 		email2 = "karin@vowsevents.com"
 		email3 = "karin@vowsevents.com"
 

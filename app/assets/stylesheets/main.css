@@ -372,7 +372,6 @@ ul {
 	transition: all .4s ease-out; }
 ul:hover { height: 130px; }
 li {
-	background-image: url('li_hover.png');
 	color: #545454;
 	background-color: white;
 	padding: 5px 21px; }
@@ -444,8 +443,7 @@ div#testimony div {
 	position: relative;
 	margin-bottom: 20px;}
 div#testimony .show-testimony { 
-	width: 200px; 
-	margin-left: 400px}
+	margin-left: 410px}
 div#testimony-sm {
 	width: 260px;
 	position: absolute;
