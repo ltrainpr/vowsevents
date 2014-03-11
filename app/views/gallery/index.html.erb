@@ -7,31 +7,42 @@
 	    // use that to move the scroll bar left and right
 	    var photos = $('.photos')
 	    var sum = 0;
-	    var photoArraySize = [];
+	    var photoArray = [];
+	    var itemsInArray = 0;
 	    $.each(photos, function(index, photo) {
-	    	photoArraySize.push($(photo).width())
-	    	sum += photoArraySize[index]
+	    	photoArray.push($(photo).width())
+	    	sum += photoArray[index];
+	    	itemsInArray += 1;
 	    });
 
-    	$('.long-div').data(photoArraySize)
-    	var counter = 0;
-    	var pixelValue = 0;
+	    $('#measure').width(sum)
+	    var pixelMovement = photoArray[1] - 1000;
+	    $('#measure').css('left', pixelMovement)
+
+    	$('.long-div').data(photoArray)
+
+    	var counter = 1;
+
 	    $('.slide-right').on('click', function(){
-    		counter += 1;
-    		pixelValue += photoArraySize[counter]
-    		console.log(counter, pixelValue);
+    		if ((counter > 0) && (counter <= itemsInArray)){
+    			counter -= 1;
+    			pixelMovement += (photoArray[counter+1]/2)+(photoArray[counter]/2);
+    		}
+    		console.log(counter, pixelMovement, itemsInArray);
         $('#measure').animate({
-        	left: "+" + pixelValue + "px"
+        	left: pixelMovement + "px"
         }, 500);
     	});
 
 	    $('.slide-left').on('click', function(){
-	    	counter -= 1;
-    		pixelValue -= photoArraySize[counter]
-    		console.log(counter, pixelValue);
+	    	if ((counter >= 0) && (counter < itemsInArray)){
+	    		counter += 1;
+    			pixelMovement += -(photoArray[counter-1]/2)-(photoArray[counter]/2);
+	    	}
+    		console.log(counter, pixelMovement, itemsInArray);
 
         $('#measure').animate({
-        	left: "-" + pixelValue + "px"
+        	left: pixelMovement + "px"
         }, 500);
 	    });
 		});
