@@ -339,8 +339,8 @@ div#gallery {
 div#gallery div.image-container { max-height: 390px; }
 div#gallery div.gallery-images {
 	height: 390px;
-	position: absolute;
-	width: 1600px;}
+	position: relative;
+	width: 1000px;}
 div#gallery img { max-height: 390px; }
 div#gallery-details { 
 	height: 112px;

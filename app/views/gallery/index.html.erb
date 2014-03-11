@@ -5,22 +5,34 @@
 	    // record left px for of each picture
 	    // insert in each of the elements
 	    // use that to move the scroll bar left and right
-	    
+	    var photos = $('.photos')
+	    var sum = 0;
+	    var photoArraySize = [];
+	    $.each(photos, function(index, photo) {
+	    	photoArraySize.push($(photo).width())
+	    	sum += photoArraySize[index]
+	    });
 
+    	$('.long-div').data(photoArraySize)
+    	var counter = 0;
+    	var pixelValue = 0;
 	    $('.slide-right').on('click', function(){
-
-	        $('#measure').animate({
-
-	        }, 500);
-	    	}
+    		counter += 1;
+    		pixelValue += photoArraySize[counter]
+    		console.log(counter, pixelValue);
+        $('#measure').animate({
+        	left: "+" + pixelValue + "px"
+        }, 500);
     	});
 
 	    $('.slide-left').on('click', function(){
+	    	counter -= 1;
+    		pixelValue -= photoArraySize[counter]
+    		console.log(counter, pixelValue);
 
-	        $('#measure').animate({
-
-	        }, 500);
-	    	}
+        $('#measure').animate({
+        	left: "-" + pixelValue + "px"
+        }, 500);
 	    });
 		});
 	</script>
@@ -38,10 +50,9 @@
 				<h1 class="dg">Gallery</h1>
 			</div>
 			<div id="gallery">
-				<input type="button" id="slide-left" class="slide-left gallery_control">
 				<div class="gallery-images">
+					<input type="button" id="slide-left" class="slide-left gallery_control">
 					<div id="measure">
-						<div class="long-div">
 							<span id='photo_count'><%= @photo_count %></span>
 							<% if @photo1 && @photo2 && @photo3 %>
 								<%= image_tag @photo1.s3_image_url.url(:medium), id: "photo1", class: "photos"  %>
@@ -63,10 +74,9 @@
 									<%= image_tag @photo8.s3_image_url.url(:medium), id: "photo8", class: "photos" %>
 								<% end %>
 							<% end %>
-						</div>
 					</div>
+					<input type="button" id="slide-right" class="slide-right gallery_control">
 				</div>
-				<input type="button" id="slide-right" class="slide-right gallery_control">
 			</div>
 
 			<div id="gallery-details">

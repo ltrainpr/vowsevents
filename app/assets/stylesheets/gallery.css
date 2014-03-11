@@ -1,11 +1,7 @@
 #measure {
-	position: relative;
+	position: absolute;
 	overflow: hidden;
 	height: 390px;
-}
-
-.long-div {
-	position: absolute;
 }
 
 .photos {
