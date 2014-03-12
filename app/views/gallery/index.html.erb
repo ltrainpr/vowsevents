@@ -1,10 +1,5 @@
 	<script type="text/javascript" data-turbolinks-eval=false>
 		$(window).load(function centerImages() {
-	    // get width of all pictures
-	    // get width of each picture
-	    // record left px for of each picture
-	    // insert in each of the elements
-	    // use that to move the scroll bar left and right
 	    var photos = $('.photos')
 	    var sum = 0;
 	    var photoArray = [];
@@ -15,15 +10,15 @@
 	    	itemsInArray += 1;
 	    });
 
-	    $('#measure').width(sum)
-	    var pixelMovement = photoArray[1] - 1000;
+	    console.log(sum)
+	    $('#measure').width(sum+100)
+	    var pixelMovement = 500 - (photoArray[1]/2) - photoArray[0];
 	    $('#measure').css('left', pixelMovement)
-
-    	$('.long-div').data(photoArray)
 
     	var counter = 1;
 
 	    $('.slide-right').on('click', function(){
+
     		if ((counter > 0) && (counter <= itemsInArray)){
     			counter -= 1;
     			pixelMovement += (photoArray[counter+1]/2)+(photoArray[counter]/2);
@@ -35,9 +30,9 @@
     	});
 
 	    $('.slide-left').on('click', function(){
-	    	if ((counter >= 0) && (counter < itemsInArray)){
+	    	if (counter < (itemsInArray-1)){
 	    		counter += 1;
-    			pixelMovement += -(photoArray[counter-1]/2)-(photoArray[counter]/2);
+    			pixelMovement -= (photoArray[counter-1]/2)+(photoArray[counter]/2);
 	    	}
     		console.log(counter, pixelMovement, itemsInArray);
 
@@ -45,6 +40,20 @@
         	left: pixelMovement + "px"
         }, 500);
 	    });
+
+	    var photoDiv = function () {
+	    	photos = $('.photos')
+		    sum = 0;
+		    photoArray = [];
+		    itemsInArray = 0;
+		    $.each(photos, function(index, photo) {
+		    	photoArray.push($(photo).width())
+		    	sum += photoArray[index];
+		    	itemsInArray += 1;
+		    });
+
+		    $('#measure').width(sum)
+	    }
 		});
 	</script>
 
