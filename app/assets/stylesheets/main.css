@@ -273,10 +273,10 @@ div#services-navigation .services-navigation-item span {
 	display: inline-block;
 	width: 275px; }
 div#services-navigation .bt { background-position-x: -14px; }
-div#services-navigation .wg { background-position-x: 631px; }
+div#services-navigation .wg { background-position-x: 620px; }
 div#services-navigation .ss { background-position-x: 939px; }
 div#services-navigation .di { background-position-x: -318px; }
-div#services-navigation .oe { background-position-x: 310px;}
+div#services-navigation .oe { background-position-x: 313px;}
 div#services-navigation .services-navigation-item:hover { background-position-y: -94px; }
 
 /* sub-pages, contact */
