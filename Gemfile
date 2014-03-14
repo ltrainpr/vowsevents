@@ -27,6 +27,7 @@ group :test do
 	gem 'capybara'
 	gem 'spork'
 	gem 'guard-spork'
+	gem 'selenium-webdriver'
 end
 
 group :production do
