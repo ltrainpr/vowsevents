@@ -6,32 +6,32 @@
 		<div id="about_wrapper">
 			<div id="about_photos">
 				<div id="about_left">
-					<p style="position:absolute; top: 46px;" id="directionz"><span class="thin direction">click name for details</span></p>	
-					<div class="about_photo karin" id="k-thumb">
-						<div class="name-tag" onclick="showKA()">
+					<p style="position:absolute; top: 46px;" id="directionz" class="toggle-hide"><span class="thin direction">click name for details</span></p>	
+					<div class="about_photo toggle-hide karin" id="k-thumb" data-indie="karin">
+						<div class="name-tag">
 							<p class="blue thin">Karin Ramos</p>
 						</div>
 					</div>
-					<div class="about_photo avery" id="a-thumb">
-						<div class="name-tag" onclick="showAV()">
+					<div class="about_photo toggle-hide avery" id="a-thumb" data-indie="avery">
+						<div class="name-tag">
 							<p class="blue thin">Avery La Fleur</p>
 						</div>
 					</div>
-					<div class="about_photo simona" id="s-thumb">
-						<div class="name-tag" onclick="showSI()">
+					<div class="about_photo toggle-hide simona" id="s-thumb" data-indie="simona">
+						<div class="name-tag">
 							<p class="blue thin">Simona Shapiro</p>
 						</div>
 					</div>
-					<div class="hide" id="group-thumb">
+					<div id="group-thumb" class="hide toggle-hide" >
 						<h2><span>Back</span></h2>
-						<%= image_tag "about-us-group-thumb.jpg", onclick: "showGroup();" %>
+						<%= image_tag "about-us-group-thumb.jpg" %>
 					</div>				
 				</div>
 				<div id="about_right">
-					<div id="group_photo">
+					<div id="group_photo" class="toggle-hide">
 						<%= image_tag "about-us-group.jpg", alt: "Vows Events Staff" %>
 					</div>
-					<div id="about-karin" class="hide">
+					<div id="about-karin" class="show about_indi show-group hide">
 						<div style="padding-right: 16px">
 							<%= image_tag "about-karin.jpg", alt: "Karin Ramos Vows Events" %>
 						</div>
@@ -42,7 +42,7 @@
 							factor. She considers herself to be a cake and cupcake aficionado.</p> 
 						</div> 
 					</div>
-					<div id="about-avery" class="hide">
+					<div id="about-avery" class="show about_indi show-group hide" >
 						<div style="padding-right: 16px">
 							<%= image_tag "about-avery.jpg", alt: "Avery S. Fleur Vows Events" %>
 						</div>
@@ -53,7 +53,7 @@
 							ease, and provided with the sense of being in good hands.</p> 
 						</div> 
 					</div>
-					<div id="about-simona" class="hide">
+					<div id="about-simona" class="show about_indi show-group hide" >
 						<div style="padding-right: 16px">
 							<%= image_tag "about-simona.jpg", alt: "Simona Shapiro Vows Events" %>
 						</div>
