@@ -2,7 +2,7 @@ require 'spec_helper'
 
 feature 'Visit Event Index Page' do
 	before :each do
-		visit '/events'
+		visit events_path
 	end
 
 	scenario 'and sees index page' do
@@ -18,6 +18,17 @@ feature 'Visit Event Index Page' do
 		click_on 'Create New Event'
 
 		expect(page).to have_css 'form'
+	end
+end
+
+feature 'Visit New Event Page' do
+	scenario 'and create an event' do
+		visit new_event_path
+		fill_in 'Name', with: 'Jack & Jill'
+		fill_in 'Date', with: '03/16/2014'
+		click_on 'Create Event'
+
+		expect(page).to have_css 'h1', text: 'Vendors'
 	end
 end
 

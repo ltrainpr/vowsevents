@@ -1,0 +1,9 @@
+<h1>Events</h1>
+
+<%= link_to 'Create New Event', '/events/new' %>
+
+<ol class="events">
+<% @events.each do |event| %>
+	<li><%= "#{event.id} #{event.name}"  %></li>
+<% end %>
+</ol>

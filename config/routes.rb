@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   resources :testimony, only: [:index, :show]
   resources :contact, only: [:index, :create]
   resources :upload_photo, only: [:index, :new, :create, :show, :destroy], as: 'images'
+  resources :events, only: [:index, :new]
 end

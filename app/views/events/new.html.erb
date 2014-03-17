@@ -1,0 +1,14 @@
+<br>
+<div>
+	<%= form_for @event do |f| %>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+		<span class="date">
+			<%= f.label :date %>
+			<%= f.date_field :date %>
+			mm/dd/yyyy
+		</span>
+		<br/>
+		<%= f.submit "Create Event", class: "new_event_button"%>
+	<% end %>
+</div>
