@@ -20,7 +20,7 @@ group :development, :test do
 	gem 'rspec-rails'
 	gem 'guard-rspec'
 	gem 'rb-fsevent'
-	gem 'factory_girl_rails'
+	gem 'factory_girl_rails', :require => false
 end
 
 group :test do
