@@ -28,6 +28,7 @@ group :test do
 	gem 'spork'
 	gem 'guard-spork'
 	gem 'selenium-webdriver'
+	gem 'factory_girl_rails'
 end
 
 group :production do
