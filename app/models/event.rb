@@ -3,4 +3,6 @@ class Event < ActiveRecord::Base
 	has_many :testimonials
 	has_many :event_vendors
 	has_many :vendors, :through => :event_vendors
+	validates :name, :date, presence: true
+	validates :date, format: {with: /\d{4}\/\d{2}\/\d{2}/}
 end
