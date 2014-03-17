@@ -16,7 +16,7 @@ describe Event do
   context "model validates format of date" do
   	it "should be valid" do
 
-  		expect(build(:event, date: Date.new(2014, 3, 17))).to be_valid
+  		expect(build(:event)).to be_valid
   	end
 
   	it "should not be valid" do

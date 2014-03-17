@@ -31,4 +31,7 @@ RSpec.configure do |config|
   config.order = "random"
   config.include FactoryGirl::Syntax::Methods
 
+  config.before(:suite) do
+    require "#{Rails.root}/db/seeds.rb"
+  end
 end
