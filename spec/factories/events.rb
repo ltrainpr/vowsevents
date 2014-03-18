@@ -3,6 +3,6 @@
 FactoryGirl.define do
   factory :event do
     name "Jill & Jack"
-    date  Date.new(2013, 4, 17)
+    date  "4/17/2013"
   end
 end
