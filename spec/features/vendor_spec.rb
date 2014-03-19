@@ -29,7 +29,7 @@ feature 'Visit New Vendor Page' do
 		expect(page).to have_css 'form input'
 	end
 
-	scenario 'and create a new Vendor', js: true do
+	scenario 'and create a new Vendor' do
 		visit '/vendors/new'
 		fill_in('Name', with: 'Jake\'s Florist')
 		fill_in('Email', with: 'jake@jakesflorist.com')
