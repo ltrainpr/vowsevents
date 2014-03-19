@@ -3,6 +3,6 @@
 FactoryGirl.define do
   factory :event do
     name "Jill & Jack"
-    date  "4/17/2013"
+    date  Date.strptime("4/17/2013", "%m/%d/%Y")
   end
 end

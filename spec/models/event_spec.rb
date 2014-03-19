@@ -2,8 +2,10 @@ require 'spec_helper'
 
 describe Event do
   context "model validates presence of name & date" do
-  	it "should be valid" do
-  		event = build(:event, date: Date.strptime("4/17/2013", "%m/%d/%Y"))
+  	let(:event) {build(:event)}
+    
+    it "should be valid" do
+  		event = build(:event)
   		expect(event).to be_valid	
   	end
 
