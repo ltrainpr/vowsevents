@@ -1,0 +1,7 @@
+<%= link_to "Create New Testimonial", new_testimonial_path %>
+<br/>
+<ol class="testimonials">
+	<% @testimonials.each do |testimonial| %>
+		<li><%= "#{testimonial.id} #{testimonial.quote} #{testimonial.event_id}" %></li>
+	<% end %>
+</ol>

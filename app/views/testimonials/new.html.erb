@@ -1,0 +1,7 @@
+
+<%= form_for @testimonial do |f| %>
+	<%= f.label :quote %>
+	<%= f.text_field :quote %>
+	<%= f.label :event_id %>
+	<%= f.select :event_id, options_for_select(Event.all.map{|event| [event.id, event.name]}) %>
+<% end %>

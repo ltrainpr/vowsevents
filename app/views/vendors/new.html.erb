@@ -11,6 +11,9 @@
 	<%= f.submit "Create Vendor", class: "new_vendor_button" %>
 <% end %>
 
+<%= link_to "See List of Testimonials", testimonials_path %>
+<%= link_to "Create New Testimonials", new_testimonial_path %>
+
 <ol class="events">
 	<% @events.each do |event| %>
 		<li><%= "#{event.id} #{event.name}"  %></li>
