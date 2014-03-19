@@ -25,9 +25,9 @@ feature 'Visit the homepage' do
 end
 
 feature 'Navigation from homepage' do
-	Event.create(name: "Rhonda & Maynard", date: "2012-06-10", created_at: "2014-03-10 02:57:45", updated_at: "2014-03-10 02:57:45")
 
 	before :each do
+		build(:event)
 		visit root_path
 		find('#nav-menu').find('h1').click
 	end
