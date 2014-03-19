@@ -25,7 +25,7 @@ feature 'Visit the homepage' do
 end
 
 feature 'Navigation from homepage' do
-	Event.create(id: 3, name: "Rhonda & Maynard", date: "2012-06-10", created_at: "2014-03-10 02:57:45", updated_at: "2014-03-10 02:57:45")
+	Event.create(name: "Rhonda & Maynard", date: "2012-06-10", created_at: "2014-03-10 02:57:45", updated_at: "2014-03-10 02:57:45")
 
 	before :each do
 		visit root_path

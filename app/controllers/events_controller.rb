@@ -8,7 +8,7 @@ class EventsController < ApplicationController
 	end
 
 	def create
-		if  /\d{4}\/\d{2}\/\d{2}/ =~ event_params[:date]
+		if  /\d{2}\/\d{2}\/\d{4}/ =~ event_params[:date]
 			new_hash = {name: event_params[:name], date: Date.strptime(event_params[:date], "%m/%d/%Y")}
 			@event = Event.create(new_hash)
 			flash[:notice] = "Event successfully created"
