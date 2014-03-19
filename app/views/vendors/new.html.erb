@@ -1,0 +1,18 @@
+<%= flash[:notice] %><%= flash[:error] %>
+<%= form_for @vendor do |f| %>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+	<%= f.label :url %>
+	<%= f.text_field :url %>
+	<%= f.label :vendor_type %>
+	<%= f.text_field :vendor_type %>
+	<%= f.label :email %>
+	<%= f.text_field :email %>
+	<%= f.submit "Create Vendor", class: "new_vendor_button" %>
+<% end %>
+
+<ol class="events">
+	<% @events.each do |event| %>
+		<li><%= "#{event.id} #{event.name}"  %></li>
+	<% end %>
+</ol>

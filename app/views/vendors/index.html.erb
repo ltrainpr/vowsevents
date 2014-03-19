@@ -1,1 +1,9 @@
 <h1>Vendors</h1>
+
+<%= link_to 'Create New Vendor', '/vendors/new' %>
+
+<ol class="vendors">
+	<% @vendors.each do |vendor| %>
+		<li><%= "#{vendor.id} #{vendor.name}"  %></li>
+	<% end %>
+</ol>
