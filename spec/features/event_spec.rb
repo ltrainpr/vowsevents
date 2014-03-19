@@ -22,6 +22,12 @@ feature 'Visit Event Index Page' do
 end
 
 feature 'Visit New Event Page' do
+	scenario 'and see form fields' do
+		visit new_event_path
+
+		expect(page).to have_css 'form input'
+	end
+
 	scenario 'and create an event' do
 		visit new_event_path
 		fill_in 'Name', with: 'Jack & Jill'
