@@ -9,15 +9,15 @@ feature 'Visit Event Index Page' do
 
 		expect(page).to have_css 'h1', text: 'Events'
 	end
+
 	scenario 'and sees last three events' do
 
 		expect(page).to have_css '.events'
 	end
 
 	scenario 'and see link to new events' do
-		click_on 'Create New Event'
 
-		expect(page).to have_css 'form'
+		expect(page).to have_css 'a', text: 'Create New Event'
 	end
 end
 
