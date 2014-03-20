@@ -28,8 +28,8 @@ feature 'Visit New Testimonail Page' do
 	scenario 'and creates testimonial', js: true do
 		visit new_testimonial_path
 		fill_in('Quote', with: 'Thanks to Vows I had freaking blast!')
-		find(:select, "Event").first(:option, 'Jen & Rob').select_option
-		# select( "Karin & Lionel" , from: 'Event')
+		save_and_open_page
+		select( "Karin & Lionel" , from: 'Event')
 		click_on('Create Testimonial')
 
 		expect(page).to have_content "Successfully Created Testimonial" 

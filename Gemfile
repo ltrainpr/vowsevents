@@ -28,6 +28,7 @@ group :test do
 	gem 'spork'
 	gem 'guard-spork'
 	gem 'selenium-webdriver'
+	gem 'launchy'
 end
 
 group :production do
