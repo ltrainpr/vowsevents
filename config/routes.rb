@@ -11,5 +11,5 @@ Rails.application.routes.draw do
   resources :upload_photo, only: [:index, :new, :create, :show, :destroy], as: 'images'
   resources :events, only: [:index, :new, :create]
   resources :vendors, only: [:index, :new, :create]
-  resources :testimonials, only: [:index, :new]
+  resources :testimonials, only: [:index, :new, :create]
 end

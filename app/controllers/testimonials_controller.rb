@@ -6,4 +6,8 @@ class TestimonialsController < ApplicationController
 	def new
 		@testimonial = Testimonial.new
 	end
+
+	def create
+		
+	end
 end
