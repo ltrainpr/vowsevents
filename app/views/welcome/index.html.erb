@@ -1,16 +1,16 @@
 
 	<div id="wrapper">
 		<%= render "partials/navigation" %>
-		<div id="call_out">	
-			<div class="call_out-text">		
+		<div id="call_out">
+			<div class="call_out-text">
 				<h2>
-					<span class="dropletter">V</span>ows Events. 
-					Our mission is to bring your vision to reality, execute the details, 
-					and strip the stress from event planning. Always exceeding our customers expectations, 
+					<span class="dropletter">V</span>ows Events.
+					Our mission is to bring your vision to reality, execute the details,
+					and strip the stress from event planning. Always exceeding our customers expectations,
 					we want our clients to forget about the details and enjoy their event.
-					<%= link_to contact_index_path, class: "no_bar" do %> 
+					<%= link_to contact_index_path, class: "no_bar" do %>
 						<span class="button">Contact</span>
-					<% end %> 
+					<% end %>
 				</h2>
 			</div>
 		</div>
@@ -46,9 +46,9 @@
 				</div>
 				<div class="sundry-from_blog">
 					<h1 class="heading">From Our Blog</h1>
-					<p class="thin">We are proud to announce that Vows Events has a new blog!
+					<p class="thin"><%= @title %>
 						<a class="no_bar blue" href="http://vowsevents.tumblr.com" style="margin-left: 15px">Read On</a>
-						<span class="thin blue" style="float: right; margin-top: 30px; ">Jan 14, 2013</span>
+						<span class="thin blue" style="float: right; margin-top: 30px; "><%= @date %></span>
 					</p>
 				</div>
 			</div>
@@ -57,5 +57,5 @@
 	<div id="footer">
 		<p class="thin blue">&copy; Vows Events, 2013</p>
 	</div>
-	
+
 
