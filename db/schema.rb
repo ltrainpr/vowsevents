@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140319022134) do
+ActiveRecord::Schema.define(version: 20140516220340) do
 
   create_table "event_vendors", id: false, force: true do |t|
     t.integer  "event_id",   null: false
@@ -51,6 +51,13 @@ ActiveRecord::Schema.define(version: 20140319022134) do
   end
 
   add_index "testimonials", ["event_id"], name: "index_testimonials_on_event_id"
+
+  create_table "users", force: true do |t|
+    t.string   "email"
+    t.string   "password_digest"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "vendors", force: true do |t|
     t.string   "name"
