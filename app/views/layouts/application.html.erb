@@ -9,9 +9,13 @@
 	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:100,600,700,700italic' rel='stylesheet' type='text/css'>
 </head>
 <body>
+  <div id="container">
+    <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, id: "flash_#{name}" %>
+    <% end %>
 
-	<%= yield %>
-
+  	<%= yield %>
+  </div>
 </body>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 </html>

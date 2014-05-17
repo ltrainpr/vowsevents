@@ -1,4 +1,5 @@
 class TestimonialsController < ApplicationController
+  before_filter :authorize
 	def index
 		@testimonials = Testimonial.all
 	end
@@ -8,6 +9,6 @@ class TestimonialsController < ApplicationController
 	end
 
 	def create
-		
+
 	end
 end

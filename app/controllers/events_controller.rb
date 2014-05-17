@@ -1,5 +1,6 @@
 class EventsController < ApplicationController
-	def index
+	before_filter :authorize
+  def index
 		@events = Event.all
 	end
 
@@ -16,7 +17,7 @@ class EventsController < ApplicationController
 			redirect_to '/vendors'
 		else
 			flash[:error] = "Name can't be empty and date needs to be properly formatted"
-			
+
 			redirect_to new_event_path
 		end
 	end

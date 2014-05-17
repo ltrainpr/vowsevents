@@ -1,3 +1,4 @@
+<%= render "partials/login" %>
 <div class="">
   <%= form_tag(new_image_path, :method => "get", id: "search-form") do %>
     <%= text_field_tag :search, params[:search], placeholder: "Search Users" %>
@@ -14,15 +15,15 @@
           <ul>
           <% event.testimonials.each do |testimonial| %>
             <% if testimonial %>
-              <li><%= testimonial.id %> <%= testimonial.quote %></li> 
+              <li><%= testimonial.id %> <%= testimonial.quote %></li>
             <% end %>
           <% end %>
-          </ul> 
+          </ul>
         </li>
       <% end %>
     </ul>
   <% end %>
-</div> 
+</div>
 
 <div class="upload_photo" style="margin-top: 150px">
   <%= form_for(@upload_photo) do |f| %>

@@ -1,7 +1,8 @@
 class VendorsController < ApplicationController
-	def index
+	before_filter :authorize
+  def index
 		@vendors = Vendor.all
-	end
+  end
 
 	def new
 		@events = Event.all
@@ -18,7 +19,7 @@ class VendorsController < ApplicationController
 		else
 			flash[:error] = "Please make sure all required fields are filled out properly"
 
-			redirect_to new_vendor_path 
+			redirect_to new_vendor_path
 		end
 	end
 
