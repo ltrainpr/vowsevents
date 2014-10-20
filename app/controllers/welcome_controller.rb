@@ -3,7 +3,7 @@ require 'json'
 
 class WelcomeController < ApplicationController
 	def index
-		@event = Event.last
+		@event = Event.order(date: :desc).limit(1).first
     if @event
 		  @event.testimonials.first ? @latest_testimonial = @event.testimonials.first.id : @latest_testimonial = nil
     end

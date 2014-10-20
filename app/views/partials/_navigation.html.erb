@@ -1,55 +1,54 @@
 <div id="header">
-	<div class="navigation" id="navigation">
-		<div class="logo_small hide nav-item" id="logo-menu">
-			<%= link_to root_path, class: "no_bar" do %>
-				<img src="assets/logo_small.png" alt="Vows Events Logo">
-			<% end %>
-		</div>
-		<div id="nav-gallery" class="hide nav-item pad-right">
-			<%= link_to gallery_index_path, :onClick =>"history.go(0)", :class => "no_bar" do %>
-				<h1 class="header">Gallery</h1>
-			<% end %>
-			</a>
-		</div>
-		<div id="nav-services" class="menu-services">
-			<%= link_to services_path, :class => "no_bar" do %>
-				<h1 class="header">Services</h1>
-			<% end %>
-		</div>
-		<div id="nav-about_us" class="hide nav-item pad-right">
-			<%= link_to about_us_path, :class => "no_bar" do %>
-				<h1 class="header">About Us</h1>
-			<% end %>
-		</div>
-		<div id="nav-testimony" class="hide nav-item pad-right">
-			<%= link_to testimony_index_path, :class => "no_bar" do %>
-				<h1 class="header">Testimony</h1>
-			<% end %>
-		</div>
-		<div class="logo show nav-item" id="logo-big">
-			<%= link_to root_path, class: "no_bar" do %>
-				<img src="assets/logo.png" alt="Vows Events Logo">
-			<% end %>
-		</div>
+  <div class="navigation" id="navigation">
+  	<div class="logo_small hide nav-item" id="logo-menu">
+  		<%= link_to root_path, class: "no_bar" do %>
+  			<img src="assets/logo_small.png" alt="Vows Events Logo">
+  		<% end %>
+  	</div>
+  	<div id="nav-gallery" class="hide nav-item pad-right">
+  		<%= link_to gallery_index_path, :onClick =>"history.go(0)", :class => "no_bar" do %>
+  			<h1 class="header">Gallery</h1>
+  		<% end %>
+  	</div>
+  	<div id="nav-services" class="menu-services">
+  		<%= link_to services_path, :class => "no_bar" do %>
+  			<h1 class="header">Services</h1>
+  		<% end %>
+  	</div>
+  	<div id="nav-about_us" class="hide nav-item pad-right">
+  		<%= link_to about_us_path, :class => "no_bar" do %>
+  			<h1 class="header">About Us</h1>
+  		<% end %>
+  	</div>
+  	<div id="nav-testimony" class="hide nav-item pad-right">
+  		<%= link_to testimony_index_path, :class => "no_bar" do %>
+  			<h1 class="header">Testimony</h1>
+  		<% end %>
+  	</div>
+  	<div class="logo show nav-item" id="logo-big">
+  		<%= link_to root_path, class: "no_bar" do %>
+  			<img src="assets/logo.png" alt="Vows Events Logo">
+  		<% end %>
+  	</div>
 
-		<div id="nav-menu" class="menu-services">
-			<h1 class="header" style="cursor: pointer;">Menu</h1>
-		</div>
-		
-		<div id="nav-blog" class="hide nav-item pad-right">
-			<%= link_to "http://vowsevents.tumblr.com/", :class => "no_bar" do %>
-				<h1 class="header">Blog</h1>
-			<% end %>
-		</div>
-		<div id="nav-contact" class="hide nav-item">
-			<%= link_to contact_index_path, :class => "no_bar" do %>
-				<h1 class="header no_pad">Contact</h1>
-			<% end %>
-		</div>
-	</div>
-	
-	<div class="swoosh">
-		<img src="assets/swoosh_border.png" id="swoosh-big" class= "show nav-item" alt="Blue Horizontal Border">
-		<img src="assets/swoosh_border_menu.png" id="swoosh-menu" class= "hide nav-item" alt="Blue Horizontal Border">
-	</div>
+  	<div id="nav-menu" class="menu-services">
+  		<h1 class="header" style="cursor: pointer;">Menu</h1>
+  	</div>
+  	
+  	<div id="nav-blog" class="hide nav-item pad-right">
+  		<%= link_to "http://vowsevents.tumblr.com/", :class => "no_bar" do %>
+  			<h1 class="header">Blog</h1>
+  		<% end %>
+  	</div>
+  	<div id="nav-contact" class="hide nav-item">
+  		<%= link_to contact_index_path, :class => "no_bar" do %>
+  			<h1 class="header no_pad">Contact</h1>
+  		<% end %>
+  	</div>
+  </div>
+
+  <div class="swoosh">
+  	<img src="assets/swoosh_border.png" id="swoosh-big" class= "show nav-item" alt="Blue Horizontal Border">
+  	<img src="assets/swoosh_border_menu.png" id="swoosh-menu" class= "hide nav-item" alt="Blue Horizontal Border">
+  </div>
 </div>
