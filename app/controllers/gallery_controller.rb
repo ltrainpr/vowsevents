@@ -1,7 +1,7 @@
 class GalleryController < ApplicationController
 	def index
 		@events = Event.order(date: :desc)
-		params[:event_id] ? event_found = Event.find(params[:event_id]) : event_found = @events
+		params[:event_id] ? event_found = Event.find(params[:event_id]) : event_found = @events.first
 		event = event_found
 		photos = event.images.where(testimonial_id: nil).last(8)
 		@photo1 = photos[0]
